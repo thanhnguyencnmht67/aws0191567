@@ -8,19 +8,21 @@ pre : " <b> 5.2. </b> "
 
 ### Mục tiêu
 
-Đảm bảo người đọc có thể truy cập AWS Management Console, chuẩn bị đầy đủ các công cụ phát triển cần thiết và tải mã nguồn dự án trước khi bắt đầu triển khai.
+Đảm bảo người đọc có thể truy cập AWS Management Console, tạo tài khoản cơ sở dữ liệu MongoDB Atlas, chuẩn bị đầy đủ các công cụ phát triển cần thiết và thiết lập mã nguồn dự án Warehouse Inventory Management trước khi bắt đầu triển khai lên hạ tầng đám mây.
 
 ---
 
 ## 1. Công cụ cần chuẩn bị
 
-Workshop này sử dụng **AWS Management Console (Web UI)** để tạo và quản lý các tài nguyên AWS. Không yêu cầu sử dụng AWS CLI hoặc các công cụ Infrastructure as Code (IaC).
+Workshop này sử dụng **AWS Management Console (Web UI)** kết hợp **Terminal/ Command line** cơ bản để đóng gói container và quản lý các tài nguyên AWS.
 
-Chuẩn bị các phần mềm sau:
+Chuẩn bị các phần mềm và tài khoản sau:
 
 - **Node.js (v18+)**: Dùng để chạy ứng dụng trên máy cục bộ.
-- **Git**: Quản lý và tải mã nguồn dự án.
 - **Docker Desktop**: Dùng để xây dựng Docker Image.
+- **AWS CLI (v2)**: Dùng để xác thực đăng nhập Docker với kho lưu trữ **Amazzon ECR** từ máy cá nhân.
+- **MongoDB Compass**: Phần mềm giao diện trực quan dùng để kết nối và kiểm tra dữ liệu tồn kho.
+- **Tài khoản MongoDB Atlas (Cloud)**: Dịch vụ cơ sở dữ liệu NoSQL đám mây (gói M0 Free Tier).
 - **Visual Studio Code (hoặc IDE khác)**: Dùng để chỉnh sửa mã nguồn.
 
 ---
@@ -36,15 +38,11 @@ Chuẩn bị các phần mềm sau:
 ```bash
 node --version
 npm --version
-git --version
+aws --version
 docker --version
 ```
 
 **Checkpoint:** Tất cả các lệnh đều trả về phiên bản hợp lệ.
-
-**Tải mã nguồn dự án:** Clone mã nguồn từ GitHub và mở dự án bằng Visual Studio Code.
-
-**Checkpoint:** Dự án được mở thành công và sẵn sàng cho quá trình triển khai.
 
 ---
 
@@ -52,5 +50,4 @@ docker --version
 
 - Đăng nhập thành công vào AWS Management Console.
 - Chuẩn bị đầy đủ môi trường phát triển.
-- Tải thành công mã nguồn dự án.
 - Hoàn thành các điều kiện chuẩn bị trước khi chuyển sang chương tiếp theo.

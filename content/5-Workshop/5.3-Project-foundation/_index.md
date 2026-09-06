@@ -6,24 +6,23 @@ chapter : false
 pre : " <b> 5.3. </b> "
 ---
 
-## Prepare Project
+## Prepare the Project
 
-In this section, you will prepare the application source code before deploying it to AWS. This includes cloning the repository, installing the required dependencies, configuring the environment variables, and verifying that the application runs successfully in the local environment.
+In this section, you will prepare the **Warehouse Inventory Management** application source code, install the required dependencies, configure the environment variables, and successfully test the application locally before building the Docker image for AWS.
 
 ---
 
-## Clone the Repository
+## Download the Project Source Code
 
-Clone the project source code from GitHub.
+Open a Terminal on your local computer and navigate to the project working directory:
 
 ```bash
-git clone <repository-url>
-cd <project-folder>
+cd quanlkhohang
 ```
 
 ---
 
-## Install Dependencies
+## Install the Dependencies
 
 Install all required Node.js packages.
 
@@ -35,49 +34,53 @@ Wait until the installation completes successfully.
 
 ---
 
-## Configure Environment Variables
+## Configure the Environment Variables
 
-Create a `.env` file in the project root directory and configure the required environment variables.
+Create a `.env` file in the project root directory and provide the service connection information.
 
 Example:
 
 ```text
-PORT=3000
+PORT=80
 MONGODB_URI=<your-mongodb-uri>
-SESSION_SECRET=<your-session-secret>
 AWS_REGION=ap-southeast-1
-AWS_S3_BUCKET=<your-s3-bucket>
-AWS_ACCESS_KEY_ID=<your-access-key>
-AWS_SECRET_ACCESS_KEY=<your-secret-key>
+S3_BUCKET_NAME=<your-s3-bucket>
 ```
 
 ![Configure Environment Variables](/images/5-Workshop/5.3-Project-foundation/env-file.png)
 
 ---
 
-## Run the Application
+## Start the Application
 
-Start the application.
-
-```bash
-npm start
-```
-
-If the application starts successfully, open your browser and navigate to:
+Start the application using the following command:
 
 ```text
-http://localhost:3000
+node server.js
+```
+
+After the Terminal displays successful connection messages:
+
+```text
+Inventory App running on port 80
+Connected to MongoDB Atlas
+```
+
+Open a web browser and navigate to:
+
+```text
+http://localhost
 ```
 
 ![Run the Application](/images/5-Workshop/5.3-Project-foundation/run-localhost.png)
 
 ---
 
-## Expected Result
+## Expected Outcome
 
-After completing this section, you should have:
+After completing this section, you will have:
 
-- Project source code cloned successfully.
-- Required dependencies installed.
-- Environment variables configured.
-- Application running successfully in the local environment.
+- The complete source structure for the Warehouse Inventory Management application.
+- All required dependencies installed in `node_modules`.
+- A correctly configured `.env` file connected to MongoDB Atlas and Amazon S3.
+- The application running successfully locally, with inventory in/out functions and the user interface tested.

@@ -8,17 +8,16 @@ pre : " <b> 5.3. </b> "
 
 ## Chuẩn bị dự án
 
-Trong phần này, bạn sẽ chuẩn bị mã nguồn ứng dụng trước khi triển khai lên AWS. Bao gồm tải mã nguồn, cài đặt các thư viện cần thiết, cấu hình biến môi trường và kiểm tra ứng dụng có thể chạy thành công trên môi trường cục bộ.
+Chuẩn bị đầy đủ mã nguồn ứng dụng Warehouse Inventory Management, cài đặt các thư viện phụ thuộc, cấu hình biến môi trường và chạy thử nghiệm thành công trên môi trường máy cục bộ trước khi đóng gói thành Docker Image để đưa lên AWS.
 
 ---
 
-## Tải mã nguồn
+## Tải mã nguồn dự án
 
-Clone mã nguồn dự án từ GitHub.
+Mở Terminal trên máy tính cá nhân và điều hướng đến thư mục làm việc của dự án:
 
 ```bash
-git clone <repository-url>
-cd <project-folder>
+cd quanlkhohang
 ```
 
 ---
@@ -37,36 +36,35 @@ npm install
 
 ## Cấu hình biến môi trường
 
-Tạo tệp `.env` trong thư mục gốc của dự án và cấu hình các biến môi trường cần thiết.
+Tạo tệp `.env` tại thư mục gốc của dự án và điền đầy đủ các thông tin kết nối dịch vụ:
 
-Ví dụ:
+
 
 ```text
-PORT=3000
-MONGODB_URI=<your-mongodb-uri>
-SESSION_SECRET=<your-session-secret>
+PORT=80
+MONGODB_URI=mongodb+srv://admin:yVepZ1pl3497hw1m@cluster0.mjcduo5.mongodb.net/inventory?retryWrites=true&w=majority
 AWS_REGION=ap-southeast-1
-AWS_S3_BUCKET=<your-s3-bucket>
-AWS_ACCESS_KEY_ID=<your-access-key>
-AWS_SECRET_ACCESS_KEY=<your-secret-key>
+S3_BUCKET_NAME=inventory-app-media-2026
+
+
 ```
-
-![Cấu hình biến môi trường](/images/5-Workshop/5.3-Project-foundation/env-file.png)
-
----
-
-## Chạy ứng dụng
-
-Khởi động ứng dụng.
-
-```bash
-npm start
-```
-
-Sau khi ứng dụng khởi động thành công, mở trình duyệt và truy cập:
+Khởi động ứng dụng bằng lệnh
 
 ```text
-http://localhost:3000
+node server.js
+```
+
+Sau khi Terminal hiển thị thông báo kết nối thành công:
+
+```text
+Inventory App running on port 80
+Connected to MongoDB Atlas
+```
+
+Mở trình duyệt web và truy cập địa chỉ:
+
+```text
+http://localhost
 ```
 
 ![Chạy ứng dụng](/images/5-Workshop/5.3-Project-foundation/run-localhost.png)
@@ -77,7 +75,7 @@ http://localhost:3000
 
 Sau khi hoàn thành phần này, bạn sẽ:
 
-- Tải thành công mã nguồn dự án.
-- Cài đặt đầy đủ các thư viện cần thiết.
-- Cấu hình thành công các biến môi trường.
-- Chạy thành công ứng dụng trên môi trường cục bộ.
+- Thiết lập hoàn chỉnh cấu trúc mã nguồn ứng dụng Warehouse Inventory Management.
+- Cài đặt đầy đủ các gói thư viện phụ thuộc (node_modules).
+- Cấu hình chính xác tệp biến môi trường .env kết nối với MongoDB Atlas và Amazon S3.
+- Chạy thành công ứng dụng trên môi trường cục bộ và kiểm tra đầy đủ các tính năng nhập/xuất kho cùng hiển thị giao diện.

@@ -8,19 +8,21 @@ pre : " <b> 5.2. </b> "
 
 ### Goal
 
-Ensure readers have access to the AWS Management Console, prepare the required local development tools, and clone the project source code before starting the deployment.
+Ensure readers can access the AWS Management Console, create a MongoDB Atlas database account, prepare the required development tools, and set up the Warehouse Inventory Management project source code before deploying to the cloud infrastructure.
 
 ---
 
 ## 1. Tools to Prepare
 
-This workshop uses the **AWS Management Console (Web UI)** to create and manage AWS resources. No AWS CLI or Infrastructure as Code (IaC) tools are required.
+This workshop uses the **AWS Management Console (Web UI)** together with basic **Terminal/Command line** tools to build containers and manage AWS resources.
 
-Please prepare the following software:
+Please prepare the following software and accounts:
 
 - **Node.js (v18+)**: Required for running the application locally.
-- **Git**: Source control management.
 - **Docker Desktop**: Required for building Docker images.
+- **AWS CLI (v2)**: Required to authenticate Docker with the **Amazon ECR** registry from the local machine.
+- **MongoDB Compass**: A visual interface for connecting to and inspecting inventory data.
+- **MongoDB Atlas account (Cloud)**: A cloud NoSQL database service using the M0 Free Tier.
 - **Visual Studio Code (or any preferred IDE)**: For editing the project source code.
 
 ---
@@ -36,21 +38,16 @@ Please prepare the following software:
 ```bash
 node --version
 npm --version
-git --version
+aws --version
 docker --version
 ```
 
 **Checkpoint:** All commands should return valid version numbers.
 
-**Clone the Project:** Clone the project source code from GitHub and open it using Visual Studio Code.
-
-**Checkpoint:** The project can be opened successfully and is ready for deployment.
-
 ---
 
 ## 3. Expected Result
 
-- Successfully access the AWS Management Console.
-- Prepare the local development environment.
-- Clone the project source code successfully.
+- Successfully sign in to the AWS Management Console.
+- Prepare the complete development environment.
 - Complete all prerequisites before proceeding to the next chapter.

@@ -8,33 +8,33 @@ pre : " <b> 5.1. </b> "
 
 ### Goal
 
-This workshop demonstrates how to deploy a cloud-native **Second-Hand Marketplace** application on AWS using containerized services, secure networking, automated deployment, and managed cloud services. After completing this workshop, you will be able to deploy a production-ready web application with high availability, scalability, and security.
+This workshop demonstrates how to deploy a **Warehouse Inventory Management** application on AWS using a cloud-native architecture, managed services, container deployment, and cloud storage. After completing this workshop, you will be able to deploy a complete warehouse management web application with scalability, high availability, and security.
 
 ---
 
-## 1. Use Case & Solution Overview
+## 1. Use Case and Solution Overview
 
-The **Second-Hand Marketplace** is a web application that allows users to buy and sell second-hand products online. The system provides essential features such as user authentication, product management, category management, product image uploads, and product searching.
+**Warehouse Inventory Management** is a web application that allows users to manage product catalogs, monitor inventory, and update stock quantities in real time. The system supports features such as adding new items by SKU, uploading product images, increasing or decreasing inventory quantities, and displaying an intuitive warehouse list.
 
-Instead of deploying the application on a traditional virtual machine, this workshop adopts a modern cloud-native architecture on AWS. The application is containerized using Docker and deployed on **Amazon ECS Fargate**, while product images are stored in **Amazon S3** and application data is stored in **MongoDB Atlas**.
+Instead of deploying the application on a traditional server, this workshop adopts a cloud-native architecture on AWS. The application is containerized using **Docker** and deployed on **Amazon ECS Fargate**, product images are stored in **Amazon S3**, and application data is stored in **MongoDB Atlas**.
 
-To improve security and maintainability, sensitive configuration values are stored in **AWS Secrets Manager**, while **Application Load Balancer**, **Amazon Route 53**, and **AWS Certificate Manager (ACM)** provide secure public access through HTTPS. The deployment process is automated using **AWS CodeBuild**, and application health is monitored using **Amazon CloudWatch**.
+To improve security and manageability, sensitive information, such as the database connection string, is stored in **AWS Secrets Manager**. The **Application Load Balancer** distributes traffic over HTTP port 80. The **Docker image** is stored and managed directly through **Amazon ECR**, and the system is monitored through **Amazon CloudWatch**.
 
 ---
 
-## 2. Architecture Diagram
+## 2. System Architecture
 
-The architecture consists of several major components:
+The system architecture consists of the following major components:
 
-- Client Access
-- Domain & HTTPS
-- Networking Infrastructure
+- Client
+- Load Balancer
+- Network Infrastructure
 - Containerized Application
 - Storage Services
-- CI/CD Pipeline
-- Monitoring & Logging
+- Docker Image Management
+- Security and Monitoring
 
-**Figure 1 – Second-Hand Marketplace Architecture**
+**Figure 1 – Warehouse Inventory Management System Architecture**
 
 ![System Architecture](/images/5-Workshop/5.1-Workshop-overview/system_architecture.png)
 
@@ -42,42 +42,39 @@ The architecture consists of several major components:
 
 ## 3. System Workflow
 
-The application processes user requests through the following workflow:
+The main system workflow consists of the following steps:
 
-1. Users access the application using a custom domain managed by **Amazon Route 53**.
+1. Users access the website through the public DNS address of the **Application Load Balancer (ALB)**.
 
-2. HTTPS certificates issued by **AWS Certificate Manager (ACM)** encrypt all communications.
+2. All user requests are sent directly over HTTP port 80 to the **Application Load Balancer (ALB)**.
 
-3. Incoming requests are routed through the **Application Load Balancer (ALB)**.
+3. The ALB distributes traffic to containers running on **Amazon ECS Fargate**.
 
-4. The ALB forwards traffic to containerized services running on **Amazon ECS Fargate**.
+4. The Node.js application processes business logic and communicates with **MongoDB Atlas** to store and retrieve data.
 
-5. The Node.js application processes business logic and communicates with **MongoDB Atlas** to store and retrieve application data.
+5. Product images are uploaded and stored in **Amazon S3**.
 
-6. Product images are uploaded and stored in **Amazon S3**.
+6. Sensitive configuration information, such as the database connection string, is retrieved from **AWS Secrets Manager**.
 
-7. Sensitive application configuration such as database credentials is retrieved securely from **AWS Secrets Manager**.
+7. Application logs and system metrics are sent to **Amazon CloudWatch** for monitoring and troubleshooting.
 
-8. Application logs and metrics are collected by **Amazon CloudWatch** for monitoring and troubleshooting.
+8. A Docker image is built locally, pushed to **Amazon ECR**, and deployed as a new version on **Amazon ECS**.
 
-9. When source code is pushed to GitHub, **AWS CodeBuild** automatically builds a Docker image, pushes it to **Amazon ECR**, and deploys the latest version to **Amazon ECS**.
 
 ---
 
-## 4. In-Scope Services
+## 4. Services Used
 
-The AWS services implemented in this workshop include:
+This workshop uses the following AWS services:
 
-### Networking
+### Network Infrastructure
 
 - Amazon VPC
 - Public Subnet
-- Private Subnet
 - Internet Gateway
-- NAT Gateway
 - Security Groups
 
-### Compute
+### Compute Services
 
 - Amazon ECS Fargate
 - Application Load Balancer
@@ -96,16 +93,6 @@ The AWS services implemented in this workshop include:
 
 - AWS IAM
 - AWS Secrets Manager
-- AWS Certificate Manager (ACM)
-
-### Domain
-
-- Amazon Route 53
-
-### CI/CD
-
-- GitHub
-- AWS CodeBuild
 
 ### Monitoring
 
@@ -113,16 +100,16 @@ The AWS services implemented in this workshop include:
 
 ---
 
-## 5. Expected Outcomes
+## 5. Learning Outcomes
 
-Upon completing this workshop, you will be able to:
+After completing this workshop, you will be able to:
 
-- Deploy a containerized Node.js application on Amazon ECS Fargate.
-- Configure a secure networking environment using Amazon VPC.
-- Store application data in MongoDB Atlas.
+- Deploy a Node.js application as a container on Amazon ECS Fargate.
+- Build network infrastructure using Amazon VPC and an Internet Gateway.
+- Connect to and use MongoDB Atlas as the database.
 - Store product images in Amazon S3.
-- Secure sensitive application configuration using AWS Secrets Manager.
-- Configure HTTPS using ACM and Route 53.
-- Build an automated deployment pipeline using GitHub, CodeBuild, Amazon ECR, and Amazon ECS.
-- Monitor application logs and system health using Amazon CloudWatch.
-- Remove all AWS resources to avoid unnecessary costs.
+- Protect configuration information using AWS Secrets Manager.
+- Configure traffic distribution using the Application Load Balancer (ALB).
+- Build a Docker image and manage its versions in Amazon ECR.
+- Monitor application activity and logs through Amazon CloudWatch.
+- Delete all AWS resources after completing the workshop to avoid unnecessary costs.
