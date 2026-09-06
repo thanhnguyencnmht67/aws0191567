@@ -7,25 +7,26 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Trần Hoàng Chiến
+&emsp; **Họ và tên:** Nguyễn Công Thành
 
-&emsp; **Số điện thoại:** 0834972928
+&emsp; **Số điện thoại:** 09623997783
 
-&emsp; **Email:** vc24902@gmail.com
+&emsp; **Email:** duongthanhngocnguyen666@gmail.com
 
-&emsp; **Trường:** Đại học Công Nghệ TP.HCM
+&emsp; **Trường:** Đại học Xây Dựng Hà Nội
 
 &emsp; **Ngành:** Công nghệ thông tin
 
-&emsp; **Lớp:** 22DTHC7
+&emsp; **Lớp:** 67CNMHT
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ ngày 17/04/2026 đến ngày 10/07/2026
+&emsp; **Thời gian thực tập:** Từ ngày 25/04/2026 đến ngày 17/10/2026
 
 ![Ảnh đại diện của bạn](/images/avatar.jpg)
+
 
 
 

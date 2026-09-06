@@ -48,8 +48,7 @@ pre: " <b> 1.6. </b> "
   * Tổ chức tài nguyên.
   * Phân bổ chi phí.
 
-* Tìm hiểu VM Import / Export:
-  * Các khái niệm Migration.
+
   * Quy trình di chuyển.
   * Các nền tảng được hỗ trợ.
 
