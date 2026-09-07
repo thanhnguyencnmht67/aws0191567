@@ -32,7 +32,7 @@ Tại mục **VPC ID**, chọn inventor-vpc
 
 Bật tính năng tự cấp Public IP cho cả 2 Subnet:
 
-Chọn **inventory-public-subnet-a** - **Action** - **Edit** - **Subnet setting **, Tích chọn **Enable auto-assign public IPv4 address** - **save**
+Chọn **inventory-public-subnet-a → Action → Edit Subnet setting → Tích chọn Enable auto - assign public IPv4 address → save**
 
 Lặp lại thao tác trên cho **inventory-public-subnet-b**.
 
@@ -88,7 +88,7 @@ Bấm **Create route table**.
 
 ### Cấu hình Tuyến đường (Routes)
 
-Chọn `inventory-public-rt`, tại tab **Routes** ở phía dưới chọn **Edit routes** và thêm đường truyền ra Internet Gateway:
+Chọn inventory-public-rt, tại tab **Routes** ở phía dưới chọn **Edit routes** và thêm đường truyền ra Internet Gateway:
 
 | Destination | Target |
 |-------------|--------|
@@ -104,8 +104,8 @@ Bấm **Save changes**.
 
 Tại tab **Subnet associations**, chọn **Edit subnet associations**, tích chọn cả 2 Public Subnet để áp dụng bảng định tuyến:
 
-- `inventory-public-subnet-a`
-- `inventory-public-subnet-b`
+- inventory-public-subnet-a
+- inventory-public-subnet-b
 
 Bấm **Save associations**.
 
@@ -119,9 +119,7 @@ Bấm **Save associations**.
 
 Sau khi hoàn thành phần này, bạn sẽ có:
 
-- Hai Public Subnet và hai Private Subnet được tạo.
-- Internet Gateway được gắn vào VPC.
-- NAT Gateway hoạt động ở trạng thái Available.
-- Public Route Table và Private Route Table được cấu hình đúng.
-- Security Group cho Application Load Balancer và Amazon ECS được thiết lập đầy đủ.
-- Hạ tầng mạng sẵn sàng cho việc triển khai ứng dụng ở các chương tiếp theo.
+- 2 Public Subnet nằm trên 2 Availability Zones khác nhau (ap-southeast-1a và ap-southeast-1b) đã bật tự động cấp IP công cộng.
+- Một Internet Gateway (inventory-igw) được liên kết thành công với inventory-vpc.
+- Một Public Route Table (inventory-public-rt) định tuyến toàn bộ lưu lượng 0.0.0.0/0 qua Internet Gateway và áp dụng cho cả 2 Subnet.
+- Hạ tầng mạng sẵn sàng để cấu hình Security Group ở phần tiếp theo.

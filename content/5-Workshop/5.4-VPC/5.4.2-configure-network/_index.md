@@ -8,51 +8,55 @@ pre : " <b> 5.4.2. </b> "
 
 ## Configure Network
 
-After creating the Virtual Private Cloud (VPC), the next step is to configure the networking components required for the application.
+After creating the Virtual Private Cloud (VPC), the next step is to configure the networking components required for the services to connect to the Internet and communicate with MongoDB Atlas.
 
-In this section, you will create public and private subnets, configure an Internet Gateway, a NAT Gateway, route tables, and security groups. These components provide secure communication between the internet, the Application Load Balancer, Amazon ECS, and other AWS services.
+In this section, you will create two public subnets in different Availability Zones, attach an Internet Gateway, and configure a Route Table to route network traffic.
 
 ---
 
-## Create Public and Private Subnets
+## Create Public Subnets
 
 Navigate to:
 
 **AWS Console → VPC → Subnets → Create subnet**
 
-Create four subnets using the following configuration:
+In **VPC ID**, select **inventory-vpc**.
+
+Create two subnets using the following configuration:
 
 | Name | Availability Zone | IPv4 CIDR |
 |------|-------------------|------------|
-| public-subnet-a | ap-southeast-1a | 10.0.1.0/24 |
-| public-subnet-b | ap-southeast-1b | 10.0.2.0/24 |
-| private-subnet-a | ap-southeast-1a | 10.0.3.0/24 |
-| private-subnet-b | ap-southeast-1b | 10.0.4.0/24 |
+| inventory-public-subnet-a | ap-southeast-1a | 10.0.1.0/24 |
+| inventory-public-subnet-b | ap-southeast-1b | 10.0.2.0/24 |
 
-Enable **Auto-assign public IPv4 address** for both public subnets.
+Enable automatic public IP assignment for both subnets:
 
-After creating the subnets, verify that all four subnets are available.
+Select **inventory-public-subnet-a → Actions → Edit subnet settings**, enable **Auto-assign public IPv4 address**, and choose **Save**.
+
+Repeat the same steps for **inventory-public-subnet-b**.
 
 ![Subnets](/images/5-Workshop/5.4-Networking/subnets.png)
 
 ---
 
-## Configure Internet Gateway
+## Configure the Internet Gateway
+
+The Internet Gateway allows resources inside the VPC to connect to the public Internet.
 
 Navigate to:
 
 **AWS Console → VPC → Internet Gateways → Create internet gateway**
 
-Configure the Internet Gateway using the following settings:
+Configure the Internet Gateway as follows:
 
 | Property | Value |
 |----------|-------|
-| Name | production-igw |
+| Name | inventory-igw |
 
 After creating the Internet Gateway:
 
-- Select **Attach to VPC**
-- Choose **production-vpc**
+- Select **Attach to VPC**.
+- Choose **production-vpc**.
 
 Verify that the Internet Gateway status is **Attached**.
 
@@ -60,112 +64,45 @@ Verify that the Internet Gateway status is **Attached**.
 
 ---
 
-## Configure NAT Gateway
+## Configure the Route Table
+
+The Route Table defines how traffic from the subnets reaches the Internet Gateway and MongoDB Atlas.
 
 Navigate to:
 
-**AWS Console → VPC → NAT Gateways → Create NAT gateway**
+**AWS Console → VPC → Route Tables → Create route table**
 
-Use the following configuration:
+Create a Route Table with the following configuration:
 
 | Property | Value |
 |----------|-------|
-| Name | production-nat |
-| Subnet | public-subnet-a |
-| Connectivity type | Public |
-| Elastic IP | Allocate Elastic IP |
+| Name | inventory-public-rt |
+| VPC | inventory-vpc |
 
-Wait until the NAT Gateway status changes to **Available** before proceeding.
+Choose **Create route table**.
 
-![NAT Gateway](/images/5-Workshop/5.4-Networking/nat-gateway.png)
+### Configure the Routes
 
----
-
-## Configure Route Tables
-
-Navigate to:
-
-**AWS Console → VPC → Route Tables**
-
-Create two route tables:
-
-| Route Table | Associated Subnets | Default Route |
-|-------------|--------------------|---------------|
-| public-rt | public-subnet-a, public-subnet-b | Internet Gateway |
-| private-rt | private-subnet-a, private-subnet-b | NAT Gateway |
-
-Configure the routes as follows.
-
-### Public Route Table
+Select **inventory-public-rt**, open the **Routes** tab, choose **Edit routes**, and add the following route:
 
 | Destination | Target |
 |-------------|--------|
-| 0.0.0.0/0 | Internet Gateway |
+| 0.0.0.0/0 | inventory-igw (Internet Gateway) |
 
-### Private Route Table
+Choose **Save changes**.
 
-| Destination | Target |
-|-------------|--------|
-| 0.0.0.0/0 | NAT Gateway |
+![Public Route Table Routes](/images/5-Workshop/5.4-Networking/route-table-routes.png)
 
-Associate each route table with the corresponding subnets.
+### Configure Subnet Associations
 
-![Route Tables](/images/5-Workshop/5.4-Networking/route-tables.png)
+Open the **Subnet associations** tab, choose **Edit subnet associations**, and select both public subnets:
 
----
+- inventory-public-subnet-a
+- inventory-public-subnet-b
 
-## Configure Security Groups
+Choose **Save associations**.
 
-Navigate to:
-
-**AWS Console → EC2 → Security Groups**
-
-Create two security groups.
-
-### Application Load Balancer Security Group
-
-| Property | Value |
-|----------|-------|
-| Name | production-alb-sg |
-| VPC | production-vpc |
-
-Configure the inbound rules:
-
-| Type | Port | Source |
-|------|------|---------|
-| HTTP | 80 | 0.0.0.0/0 |
-| HTTPS | 443 | 0.0.0.0/0 |
-
-Configure the outbound rules:
-
-| Type | Destination |
-|------|-------------|
-| All Traffic | 0.0.0.0/0 |
-
----
-
-### Amazon ECS Security Group
-
-| Property | Value |
-|----------|-------|
-| Name | production-ecs-sg |
-| VPC | production-vpc |
-
-Configure the inbound rules:
-
-| Type | Port | Source |
-|------|------|---------|
-| Custom TCP | 3000 | production-alb-sg |
-
-Configure the outbound rules:
-
-| Type | Destination |
-|------|-------------|
-| All Traffic | 0.0.0.0/0 |
-
-After completing the configuration, verify that both security groups have been created successfully.
-
-![Security Groups](/images/5-Workshop/5.4-Networking/security-groups.png)
+![Subnet Associations](/images/5-Workshop/5.4-Networking/subnet-associations.png)
 
 ---
 
@@ -173,9 +110,7 @@ After completing the configuration, verify that both security groups have been c
 
 After completing this section, you will have:
 
-- Two public subnets and two private subnets created.
-- An Internet Gateway attached to the VPC.
-- A NAT Gateway in the **Available** state.
-- Public and private route tables configured correctly.
-- Security Groups configured for the Application Load Balancer and Amazon ECS.
-- A networking environment ready for deploying the application in the following chapters.
+- Two public subnets in different Availability Zones (ap-southeast-1a and ap-southeast-1b) with automatic public IP assignment enabled.
+- An Internet Gateway named **inventory-igw** successfully attached to **inventory-vpc**.
+- A public Route Table named **inventory-public-rt** routing all `0.0.0.0/0` traffic through the Internet Gateway and associated with both subnets.
+- A networking infrastructure ready for Security Group configuration in the next section.
