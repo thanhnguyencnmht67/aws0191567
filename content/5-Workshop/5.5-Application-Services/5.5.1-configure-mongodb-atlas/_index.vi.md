@@ -8,91 +8,69 @@ pre : " <b> 5.5.1. </b> "
 
 ## Cấu hình MongoDB Atlas
 
-Trong phần này, bạn sẽ cấu hình MongoDB Atlas để làm cơ sở dữ liệu cho ứng dụng Second-Hand Marketplace.
+Trong phần này, bạn sẽ cấu hình MongoDB Atlas để làm cơ sở dữ liệu NoSQL đám mây cho ứng dụng **Warehouse Inventory Management**.
 
-MongoDB Atlas là dịch vụ cơ sở dữ liệu trên nền tảng đám mây, dùng để lưu trữ dữ liệu như người dùng, sản phẩm, danh mục và đơn hàng.
+MongoDB Atlas chịu trách nhiệm lưu trữ các đối tượng dữ liệu như: thông tin sản phẩm, danh mục hàng hóa, số lượng tồn kho và lịch sử các phiếu nhập/xuất kho.
 
 ---
 
-## Tạo Database Cluster
+## 1. Tạo Database Cluster
 
-Đăng nhập MongoDB Atlas và truy cập:
-
-**Deployment → Database**
-
-Tạo một Cluster mới hoặc sử dụng Cluster hiện có của dự án.
-
-Sau khi tạo xong, kiểm tra trạng thái của Cluster phải là **Available**.
+1. Đăng nhập vào [MongoDB Atlas Console](https://cloud.mongodb.com/).
+2. Truy cập: **Deployment → Database**.
+3. Chọn gói **M0 (Free Tier)**, chọn nhà cung cấp **AWS** và vùng **Singapore (ap-southeast-1)** để tối ưu hóa độ trễ kết nối từ VPC.
+4. Đặt tên Cluster (ví dụ: Cluster0 hoặc InventoryCluster) và bấm **Create Deployment**.
+5. Sau khi tạo xong, kiểm tra trạng thái của Cluster hiển thị **Available (hoặc Active)**.
 
 ![MongoDB Cluster](/images/5-Workshop/5.5-Application-Services/mongodb-cluster.png)
 
 ---
 
-## Tạo Database User
+## 2. Tạo Database User
 
 Truy cập:
 
-**Security → Database Access**
+**Security → Database Access → Add New Database User**
 
-Tạo một Database User với quyền phù hợp.
+Cấu hình tài khoản truy cập:
 
-Ví dụ cấu hình:
+| Thuộc tính | Giá trị cấu hình | Mô tả |
+| :--- | :--- | :--- |
+| **Authentication Method** | Password | Xác thực bằng tài khoản/mật khẩu |
+| **Username** | inventory_admin | Tên người dùng cơ sở dữ liệu |
+| **Password** | *(Tự tạo mật khẩu an toàn)* | Lưu lại để dùng trong connection string |
+| **Database User Privileges** | Read and write to any database *(hoặc Built-in Role)* | Cấp quyền đọc/ghi dữ liệu kho |
 
-| Thuộc tính | Giá trị |
-|------------|----------|
-| Authentication Method | Password |
-| Username | admin |
-| Database User Privileges | Atlas Admin |
-
-Lưu lại tên đăng nhập và mật khẩu để sử dụng ở các bước tiếp theo.
+Bấm **Add User** để hoàn tất.
 
 ![Database User](/images/5-Workshop/5.5-Application-Services/database-user.png)
 
 ---
 
-## Cấu hình Network Access
+## 3. Cấu hình Network Access
 
 Truy cập:
 
-**Security → Network Access**
+**Security → Network Access → Add IP Address**
 
-Thêm địa chỉ IP được phép kết nối đến cơ sở dữ liệu.
+Để cho phép các container chạy trên AWS ECS Fargate và máy phát triển local có thể kết nối được:
 
-Trong quá trình phát triển, bạn có thể tạm thời cho phép mọi địa chỉ IP.
+| Thuộc tính | Giá trị | Ghi chú |
+| :--- | :--- | :--- |
+| **Access List Entry** | 0.0.0.0/0 | *Allow Access from Anywhere* (hoặc gán dải Public IP của ECS) |
+| **Comment** | Allow ECS tasks and Local dev | Ghi chú mục đích |
 
-| Thuộc tính | Giá trị |
-|------------|----------|
-| Access List Entry | 0.0.0.0/0 |
-
-Sau khi triển khai thực tế, nên thay bằng địa chỉ IP hoặc dải mạng phù hợp.
+Bấm **Confirm** và đợi IP chuyển sang trạng thái **Active**.
 
 ![Network Access](/images/5-Workshop/5.5-Application-Services/network-access.png)
 
 ---
 
-## Lấy Connection String
+## 4. Lấy Chuỗi kết nối (Connection String)
 
-Mở Cluster và chọn **Connect**.
-
-Chọn **Drivers** và sao chép chuỗi kết nối MongoDB.
-
-Ví dụ:
+1. Tại màn hình **Database Deployments**, bấm nút **Connect** ở Cluster của bạn.
+2. Chọn phương thức kết nối: **Drivers** (Node.js).
+3. Sao chép định dạng chuỗi kết nối MongoDB:
 
 ```text
-mongodb+srv://admin:<password>@cluster0.xxxxx.mongodb.net/secondhand
-```
-
-Chuỗi kết nối này sẽ được lưu trữ an toàn bằng **AWS Secrets Manager** ở phần tiếp theo.
-
-![Connection String](/images/5-Workshop/5.5-Application-Services/connection-string.png)
-
----
-
-## Kết quả mong đợi
-
-Sau khi hoàn thành phần này, bạn sẽ có:
-
-- Một MongoDB Atlas Cluster sẵn sàng sử dụng.
-- Database User được cấu hình.
-- Network Access được cấu hình.
-- Chuỗi kết nối MongoDB sẵn sàng để ứng dụng sử dụng.
+mongodb+srv://inventory_admin:<password>@cluster0.xxxxx.mongodb.net/warehouse_db?retryWrites=true&w=majority

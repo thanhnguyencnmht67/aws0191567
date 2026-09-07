@@ -8,21 +8,23 @@ pre : " <b> 5.5.1. </b> "
 
 ## Configure MongoDB Atlas
 
-In this section, you will configure MongoDB Atlas to serve as the database for the Second-Hand Marketplace application.
+In this section, you will configure MongoDB Atlas as the cloud NoSQL database for the Warehouse Inventory Management application.
 
-MongoDB Atlas is a fully managed cloud database that stores application data such as users, products, categories, and orders.
+MongoDB Atlas stores product information, inventory categories, stock quantities, and inventory receipt and issue history.
 
 ---
 
 ## Create a Database Cluster
 
-Sign in to MongoDB Atlas and navigate to:
+1. Sign in to the [MongoDB Atlas Console](https://cloud.mongodb.com/).
+2. Navigate to:
 
 **Deployment → Database**
 
-Create a cluster or use an existing cluster for the project.
+3. Choose the **M0 (Free Tier)**, select **AWS**, and choose **Singapore (ap-southeast-1)** to reduce latency from the VPC.
+4. Enter a cluster name, such as `Cluster0` or `InventoryCluster`, and choose **Create Deployment**.
 
-After the cluster is created, verify that its status is **Available**.
+5. After creation, verify that the cluster status is **Available** or **Active**.
 
 ![MongoDB Cluster](/images/5-Workshop/5.5-Application-Services/mongodb-cluster.png)
 
@@ -34,15 +36,13 @@ Navigate to:
 
 **Security → Database Access**
 
-Create a database user with the required permissions.
-
-Example configuration:
+Create a database user with the following configuration:
 
 | Property | Value |
 |----------|-------|
 | Authentication Method | Password |
-| Username | admin |
-| Database User Privileges | Atlas Admin |
+| Username | inventory_admin |
+| Database User Privileges | Read and write to any database |
 
 Save the username and password for later use.
 
@@ -63,6 +63,7 @@ For development purposes, you may temporarily allow access from all IP addresses
 | Property | Value |
 |----------|-------|
 | Access List Entry | 0.0.0.0/0 |
+| Comment | Allow ECS tasks and local development |
 
 After deployment, replace this with the appropriate public IP address or CIDR range.
 
@@ -72,14 +73,14 @@ After deployment, replace this with the appropriate public IP address or CIDR ra
 
 ## Obtain the Connection String
 
-Open the cluster and select **Connect**.
+1. In **Database Deployments**, choose **Connect** for your cluster.
 
-Choose **Drivers** and copy the MongoDB connection string.
+2. Choose **Drivers** for Node.js and copy the MongoDB connection string.
 
 Example:
 
 ```text
-mongodb+srv://admin:<password>@cluster0.xxxxx.mongodb.net/secondhand
+mongodb+srv://inventory_admin:<password>@cluster0.xxxxx.mongodb.net/warehouse_db?retryWrites=true&w=majority
 ```
 
 This connection string will be stored securely using AWS Secrets Manager in a later section.

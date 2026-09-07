@@ -25,7 +25,7 @@ Configure the repository with the following settings.
 | Property | Value |
 |----------|-------|
 | Visibility settings | Private |
-| Repository name | secondhand-marketplace |
+| Repository name | inventory-app |
 
 Choose **Create repository**.
 
@@ -54,7 +54,7 @@ Login Succeeded
 Tag the local Docker image using the Amazon ECR repository URI.
 
 ```bash
-docker tag secondhand-marketplace:latest <account-id>.dkr.ecr.ap-southeast-1.amazonaws.com/secondhand-marketplace:latest
+docker tag inventory-app:latest <account-id>.dkr.ecr.ap-southeast-1.amazonaws.com/inventory-app:latest
 ```
 
 ---
@@ -64,7 +64,7 @@ docker tag secondhand-marketplace:latest <account-id>.dkr.ecr.ap-southeast-1.ama
 Upload the Docker image to Amazon ECR.
 
 ```bash
-docker push <account-id>.dkr.ecr.ap-southeast-1.amazonaws.com/secondhand-marketplace:latest
+docker push <account-id>.dkr.ecr.ap-southeast-1.amazonaws.com/inventory-app:latest
 ```
 
 Docker uploads each image layer to Amazon ECR. Depending on the image size and network connection, this process may take several minutes.

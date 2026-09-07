@@ -8,7 +8,7 @@ pre : " <b> 5.7. </b> "
 
 ### Goal
 
-Deploy the Second-Hand Marketplace application to Amazon ECS using AWS Fargate.
+Deploy the Warehouse Inventory Management application to Amazon ECS using AWS Fargate.
 
 ---
 
@@ -22,12 +22,14 @@ The deployment includes creating an ECS cluster, configuring a task definition, 
 
 ---
 
-## 2. Detailed Practice Content
+## 2. Practice Content
 
 Complete the following sections in order:
 
-- **5.7.1-configure-load-balancer**
-- **5.7.2-deploy-amazon-ecs**
+- **5.7.1 Create the ECS Cluster**
+- **5.7.2 Create the Task Definition**
+- **5.7.3 Create the ECS Service**
+- **5.7.4 Verify the Deployment**
 
 
 ---

@@ -8,9 +8,9 @@ pre : " <b> 5.5.2. </b> "
 
 ## Configure Amazon S3
 
-In this section, you will configure an Amazon S3 bucket to store product images for the Second-Hand Marketplace application.
+In this section, you will create an Amazon S3 bucket to store product images, documents, and attachments for the Warehouse Inventory Management application.
 
-Instead of storing image files on the application server, Amazon S3 provides scalable and durable object storage that can be accessed by the application running on Amazon ECS.
+Amazon S3 provides highly durable, available, and scalable object storage.
 
 ---
 
@@ -24,14 +24,38 @@ Configure the bucket using the following settings.
 
 | Property | Value |
 |----------|-------|
-| Bucket name | *your-bucket-name* |
-| AWS Region | ap-southeast-1 |
-| Object Ownership | ACLs disabled |
-| Block Public Access | Enabled |
+| AWS Region | ap-southeast-1 (Singapore) |
+| Bucket name | inventory-warehouse-media-<your-name> |
+| Object Ownership | ACLs disabled (recommended) |
+| Block Public Access | Disable Block all public access |
+| Default Encryption | SSE-S3 |
 
-After reviewing the configuration, choose **Create bucket**.
+Confirm the public access warning and choose **Create bucket**.
 
-![Create Bucket](/images/5-Workshop/5.5-Application-Services/create-bucket.png)
+![Create S3 Bucket](/images/5-Workshop/5.5-Application-Services/create-s3-bucket.png)
+
+## Configure the Bucket Policy
+
+To allow users to view inventory images directly in the web interface, configure a public read policy for `s3:GetObject`.
+
+Navigate to **the bucket → Permissions → Bucket policy → Edit** and replace `<your-bucket-name>` with the actual bucket name:
+
+```json
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "PublicReadGetObject",
+			"Effect": "Allow",
+			"Principal": "*",
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::<your-bucket-name>/*"
+		}
+	]
+}
+```
+
+Choose **Save changes**.
 
 ---
 
@@ -39,7 +63,7 @@ After reviewing the configuration, choose **Create bucket**.
 
 Open the bucket and choose **Upload**.
 
-Upload one or more product images that will be used by the application.
+Upload one or more product images and documents that will be used by the application.
 
 After the upload is complete, verify that the objects appear in the bucket.
 

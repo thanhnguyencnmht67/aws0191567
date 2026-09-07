@@ -56,7 +56,7 @@ Configure the Internet Gateway as follows:
 After creating the Internet Gateway:
 
 - Select **Attach to VPC**.
-- Choose **production-vpc**.
+- Choose **inventory-vpc**.
 
 Verify that the Internet Gateway status is **Attached**.
 

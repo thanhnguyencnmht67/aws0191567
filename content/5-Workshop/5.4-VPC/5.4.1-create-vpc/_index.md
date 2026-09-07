@@ -25,7 +25,7 @@ Select **VPC only**, then configure the following settings:
 | Property | Value |
 |----------|-------|
 | Resources to create | VPC only |
-| Name tag | production-vpc |
+| Name tag | inventory-vpc |
 | IPv4 CIDR | 10.0.0.0/16 |
 | IPv6 CIDR | None |
 | Tenancy | Default |
@@ -44,7 +44,7 @@ Navigate to:
 
 When **VPC only** is selected, AWS may disable DNS Hostnames by default. Enable DNS settings so internal domain name resolution works correctly.
 
-Select **production-vpc**, choose **Actions**, and then select **Edit VPC settings**.
+Select **inventory-vpc**, choose **Actions**, and then select **Edit VPC settings**.
 
 Under **DNS settings**, enable **DNS resolution** and **DNS hostnames**, then choose **Save changes**.
 
@@ -58,7 +58,7 @@ Navigate to:
 
 **AWS Console → VPC → Your VPCs**
 
-Select **production-vpc** and verify the following settings:
+Select **inventory-vpc** and verify the following settings:
 
 | Property | Expected Value |
 |----------|----------------|
@@ -77,7 +77,7 @@ Confirm that the VPC has been created successfully before proceeding to create s
 
 After completing this section, you will have:
 
-- A Virtual Private Cloud named **production-vpc**.
+- A Virtual Private Cloud named **inventory-vpc**.
 - A private networking environment with the IPv4 CIDR block **10.0.0.0/16**.
 - DNS Resolution and DNS Hostnames enabled.
 - A VPC ready for configuring subnets and other networking resources.

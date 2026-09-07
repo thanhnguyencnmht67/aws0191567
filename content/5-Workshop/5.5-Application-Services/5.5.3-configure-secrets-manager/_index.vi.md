@@ -8,69 +8,51 @@ pre : " <b> 5.5.3. </b> "
 
 ## Cấu hình AWS Secrets Manager
 
-Trong phần này, bạn sẽ cấu hình AWS Secrets Manager để lưu trữ an toàn các thông tin nhạy cảm của ứng dụng Second-Hand Marketplace.
+Trong phần này, bạn sẽ sử dụng **AWS Secrets Manager** để lưu trữ an toàn các thông tin cấu hình nhạy cảm và biến môi trường của ứng dụng **Warehouse Inventory Management**.
 
-Thay vì lưu trực tiếp các thông tin này trong mã nguồn, AWS Secrets Manager giúp quản lý và bảo vệ chúng một cách tập trung và an toàn.
+Việc này giúp bảo vệ chuỗi kết nối cơ sở dữ liệu và thông tin xác thực, tránh việc lưu trực tiếp (hardcode) vào mã nguồn hoặc Dockerfile.
 
 ---
 
-## Tạo Secret
+## 1. Tạo Secret mới
 
 Truy cập:
 
-**AWS Console → AWS Secrets Manager → Secrets → Store a new secret**
+**AWS Console → Secrets Manager → Store a new secret**
 
-Chọn **Other type of secret**.
+Chọn loại Secret:
+- **Secret type:** Other type of secret
+- **Key/value pairs:** Nhập các biến cấu hình ứng dụng:
 
-Cấu hình Secret theo các thông tin sau.
+| Key | Value mẫu | Mô tả |
+| :--- | :--- | :--- |
+| PORT | 80 | Cổng ứng dụng lắng nghe |
+| MONGODB_URI | mongodb+srv://inventory_admin:<password>@cluster0... | Chuỗi kết nối MongoDB Atlas |
+| AWS_REGION | ap-southeast-1 | Region triển khai dịch vụ |
+| S3_BUCKET_NAME | inventory0191567-097040011859-ap-southeast-1-an | Tên S3 Bucket lưu trữ hình ảnh |
+| SESSION_SECRET | WarehouseSecretKey2026!@# | Chuỗi khóa bí mật cho phiên làm việc |
 
-| Thuộc tính | Giá trị |
-|------------|----------|
-| Secret type | Other type of secret |
-| Key | MONGODB_URI |
-| Value | Chuỗi kết nối MongoDB Atlas |
+![Store Secret](/images/5-Workshop/5.5-Application-Services/create-secret-keys.png)
 
-Chọn **Next** để tiếp tục.
-
-![Create Secret](/images/5-Workshop/5.5-Application-Services/create-secret.png)
+Chọn **Next**.
 
 ---
 
-## Cấu hình thông tin Secret
+## 2. Cấu hình tên và lưu trữ Secret
 
-Đặt tên cho Secret.
+- **Secret name:** inventory-app-secrets
+- **Description:** Environment variables for Warehouse Inventory Management
+- **Automatic rotation:** Giữ mặc định Disable automatic rotation.
 
-Ví dụ:
-
-| Thuộc tính | Giá trị |
-|------------|----------|
-| Secret name | production/mongodb |
-| Description | MongoDB connection string |
-
-Chọn **Next** và giữ nguyên các thiết lập mặc định.
+Xem lại toàn bộ thông tin và chọn **Store**.
 
 ![Secret Details](/images/5-Workshop/5.5-Application-Services/secret-details.png)
 
 ---
 
-## Kiểm tra Secret
+## 3. Lấy Secret ARN
 
-Truy cập:
+Sau khi khởi tạo thành công, truy cập vào chi tiết Secret inventory-app-secrets và sao chép mã **Secret ARN**:
 
-**AWS Console → Secrets Manager → Secrets**
-
-Xác nhận Secret vừa tạo xuất hiện trong danh sách.
-
-Ứng dụng sẽ sử dụng Secret này khi được triển khai trên Amazon ECS.
-
-![Secret List](/images/5-Workshop/5.5-Application-Services/secret-list.png)
-
----
-
-## Kết quả mong đợi
-
-Sau khi hoàn thành phần này, bạn sẽ có:
-
-- Một Secret được tạo trong AWS Secrets Manager.
-- Chuỗi kết nối MongoDB Atlas được lưu trữ an toàn.
-- Secret sẵn sàng để Amazon ECS sử dụng.
+```text
+arn:aws:secretsmanager:ap-southeast-1:097040011859:secret:inventory-app-secrets-V2pD55

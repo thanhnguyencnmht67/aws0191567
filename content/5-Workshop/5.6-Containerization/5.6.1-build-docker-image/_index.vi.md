@@ -8,9 +8,22 @@ pre : " <b> 5.6.1. </b> "
 
 ## Build Docker Image
 
-Trong phần này, bạn sẽ tạo Dockerfile và build Docker Image cho ứng dụng Second-Hand Marketplace.
+Trong phần này, bạn sẽ tạo Dockerfile, tệp loại trừ .dockerignore và build Docker Image cho ứng dụng Warehouse Inventory Management.
 
-Docker giúp đóng gói ứng dụng cùng các thư viện cần thiết vào một container, đảm bảo môi trường chạy nhất quán giữa môi trường phát triển và triển khai.
+Docker giúp đóng gói toàn bộ mã nguồn cùng các thư viện phụ thuộc vào một container độc lập, đảm bảo môi trường chạy nhất quán tuyệt đối giữa máy phát triển cá nhân và hạ tầng đám mây Amazon ECS Fargate.
+
+Tạo tệp .dockerignore
+
+Tại thư mục gốc của dự án, tạo một tệp mang tên **.dockerignore** để tránh việc copy các thư mục nặng, file cấu hình nhạy cảm hoặc file tạm vào container image:
+
+```text
+node_modules
+npm-debug.log
+.env
+.git
+.gitignore
+README.md
+```
 
 ---
 
@@ -23,16 +36,22 @@ Dockerfile được sử dụng trong dự án như sau.
 ```dockerfile
 FROM node:20-alpine
 
+# Thư mục làm việc bên trong container
 WORKDIR /app
 
+# Sao chép file cấu hình phụ thuộc trước để tận dụng Docker Cache
 COPY package*.json ./
 
+# Cài đặt các thư viện phụ thuộc
 RUN npm install
 
+# Sao chép toàn bộ mã nguồn ứng dụng
 COPY . .
 
-EXPOSE 3000
+# Mở cổng 80 cho ứng dụng web
+EXPOSE 80
 
+# Lệnh khởi chạy ứng dụng
 CMD ["npm", "start"]
 ```
 
@@ -42,6 +61,7 @@ Lưu Dockerfile sau khi hoàn tất cấu hình.
 
 ---
 
+
 ## Build Docker Image
 
 Sau khi tạo Dockerfile, mở Terminal tại thư mục gốc của dự án và thực hiện build Docker Image.
@@ -49,23 +69,17 @@ Sau khi tạo Dockerfile, mở Terminal tại thư mục gốc của dự án v�
 Chạy lệnh sau:
 
 ```bash
-docker build -t secondhand-marketplace .
+docker build -t inventory-app .
 ```
 
 Trong quá trình build, Docker sẽ thực hiện các bước sau:
 
-1. Tải Node.js base image nếu chưa có trên máy.
-2. Tạo thư mục làm việc bên trong container.
-3. Sao chép toàn bộ mã nguồn của dự án vào container.
-4. Cài đặt các thư viện của ứng dụng bằng **npm install**.
-5. Đóng gói toàn bộ ứng dụng thành một Docker Image.
+1. Tải base image Node.js 20 Alpine từ Docker Hub nếu chưa có trên máy.
+2. Thiết lập thư mục làm việc /app bên trong container.
+3. Cài đặt các thư viện của ứng dụng bằng lệnh **npm install**.
+4. Sao chép toàn bộ mã nguồn của dự án vào container (bỏ qua các file trong .dockerignore).
+5. Đóng gói ứng dụng thành một Docker Image hoàn chỉnh.
 
-Sau khi build thành công, Docker sẽ hiển thị thông báo tương tự:
-
-```text
-Successfully built <IMAGE_ID>
-Successfully tagged secondhand-marketplace:latest
-```
 
 Để kiểm tra Docker Image vừa tạo, chạy lệnh:
 
@@ -81,6 +95,6 @@ Lệnh này sẽ hiển thị danh sách Docker Image trên máy. Xác nhận Do
 
 Sau khi hoàn thành phần này, bạn sẽ có:
 
-- Dockerfile được tạo thành công.
-- Docker Image được build thành công.
-- Docker Image sẵn sàng để đẩy lên Amazon ECR.
+- Tệp .dockerignore và Dockerfile chuẩn hóa cho ứng dụng quản lý kho.
+- Docker Image mang tên inventory-app được build thành công trên máy local.
+- Container Image sẵn sàng để gắn tag và tải lên Amazon Elastic Container Registry (Amazon ECR) ở phần tiếp theo.

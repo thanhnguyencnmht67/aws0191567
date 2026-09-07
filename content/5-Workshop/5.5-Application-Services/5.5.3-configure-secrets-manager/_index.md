@@ -8,9 +8,9 @@ pre : " <b> 5.5.3. </b> "
 
 ## Configure AWS Secrets Manager
 
-In this section, you will configure AWS Secrets Manager to securely store sensitive information used by the Second-Hand Marketplace application.
+In this section, you will use AWS Secrets Manager to securely store sensitive configuration values and environment variables for the Warehouse Inventory Management application.
 
-Instead of embedding secrets directly in the application source code, AWS Secrets Manager provides a secure and centralized way to manage sensitive configuration values.
+This protects the database connection string and credentials from being hardcoded in the source code or Dockerfile.
 
 ---
 
@@ -22,17 +22,19 @@ Navigate to:
 
 Select **Other type of secret**.
 
-Configure the secret using the following information.
+Enter the following application configuration values. Replace the example values with your own:
 
-| Property | Value |
-|----------|-------|
-| Secret type | Other type of secret |
-| Key | MONGODB_URI |
-| Value | MongoDB Atlas connection string |
+| Key | Example value |
+| :--- | :--- |
+| PORT | 80 |
+| MONGODB_URI | `mongodb+srv://inventory_admin:<password>@cluster0...` |
+| AWS_REGION | ap-southeast-1 |
+| S3_BUCKET_NAME | `<your-bucket-name>` |
+| SESSION_SECRET | `<generate-a-strong-secret>` |
 
 Choose **Next** to continue.
 
-![Create Secret](/images/5-Workshop/5.5-Application-Services/create-secret.png)
+![Store Secret](/images/5-Workshop/5.5-Application-Services/create-secret-keys.png)
 
 ---
 
@@ -44,12 +46,18 @@ Example:
 
 | Property | Value |
 |----------|-------|
-| Secret name | production/mongodb |
-| Description | MongoDB connection string |
+| Secret name | inventory-app-secrets |
+| Description | Environment variables for Warehouse Inventory Management |
 
 Choose **Next** and keep the remaining settings as default.
 
 ![Secret Details](/images/5-Workshop/5.5-Application-Services/secret-details.png)
+
+Keep automatic rotation disabled unless a rotation strategy has been configured, then choose **Store**.
+
+## Get the Secret ARN
+
+Open `inventory-app-secrets`, copy its **Secret ARN**, and use that ARN when configuring the Amazon ECS task definition.
 
 ---
 
@@ -59,7 +67,7 @@ Navigate to:
 
 **AWS Console → Secrets Manager → Secrets**
 
-Confirm that the newly created secret appears in the list.
+Confirm that `inventory-app-secrets` appears in the list.
 
 The application will retrieve this secret during deployment on Amazon ECS.
 
@@ -72,5 +80,5 @@ The application will retrieve this secret during deployment on Amazon ECS.
 After completing this section, you will have:
 
 - A secret created in AWS Secrets Manager.
-- The MongoDB connection string securely stored.
-- A secret ready to be used by the Amazon ECS task.
+- The application environment variables securely stored.
+- The Secret ARN ready to be used by the Amazon ECS task.

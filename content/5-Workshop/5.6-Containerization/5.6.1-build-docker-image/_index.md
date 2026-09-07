@@ -8,9 +8,22 @@ pre : " <b> 5.6.1. </b> "
 
 ## Build Docker Image
 
-In this section, you will create a Dockerfile and build a Docker image for the Second-Hand Marketplace application.
+In this section, you will create a Dockerfile, a `.dockerignore` file, and build a Docker image for the Warehouse Inventory Management application.
 
-Docker packages the application and its dependencies into a portable container, ensuring a consistent runtime environment across development and production.
+Docker packages the application source code and its dependencies into an isolated container, ensuring a consistent runtime environment between the local development machine and Amazon ECS Fargate.
+
+## Create the .dockerignore File
+
+In the project root directory, create a file named **.dockerignore**. This prevents large directories, sensitive configuration files, and temporary files from being copied into the container image:
+
+```text
+node_modules
+npm-debug.log
+.env
+.git
+.gitignore
+README.md
+```
 
 ---
 
@@ -23,16 +36,22 @@ The Dockerfile used in this project is shown below.
 ```dockerfile
 FROM node:20-alpine
 
+# Working directory inside the container
 WORKDIR /app
 
+# Copy dependency files first to use the Docker cache
 COPY package*.json ./
 
+# Install dependencies
 RUN npm install
 
+# Copy the application source code
 COPY . .
 
-EXPOSE 3000
+# Expose port 80 for the web application
+EXPOSE 80
 
+# Start the application
 CMD ["npm", "start"]
 ```
 
@@ -46,26 +65,19 @@ Save the Dockerfile after completing the configuration.
 
 After creating the Dockerfile, open a terminal in the project root directory and build the Docker image.
 
-Run the following command.
+Run the following command:
 
 ```bash
-docker build -t secondhand-marketplace .
+docker build -t inventory-app .
 ```
 
 Docker performs the following operations during the build process:
 
-1. Downloads the required Node.js base image if it is not available locally.
-2. Creates the application working directory inside the container.
-3. Copies the project files into the container.
-4. Installs all application dependencies using **npm install**.
-5. Packages the application into a Docker image.
-
-When the build completes successfully, Docker displays a message similar to the following.
-
-```text
-Successfully built <IMAGE_ID>
-Successfully tagged secondhand-marketplace:latest
-```
+1. Downloads the Node.js 20 Alpine base image from Docker Hub if it is not available locally.
+2. Creates the `/app` working directory inside the container.
+3. Installs the application dependencies using **npm install**.
+4. Copies the project source code into the container, excluding files listed in `.dockerignore`.
+5. Packages the application into a complete Docker image.
 
 To verify that the image was created successfully, run:
 
@@ -73,7 +85,7 @@ To verify that the image was created successfully, run:
 docker images
 ```
 
-The command displays all Docker images stored on the local machine. Confirm that the newly created image appears in the list with the **latest** tag.
+The command displays all Docker images stored on the local machine. Confirm that the newly created **inventory-app** image appears in the list with the **latest** tag.
 
 ---
 
@@ -81,6 +93,6 @@ The command displays all Docker images stored on the local machine. Confirm that
 
 After completing this section, you will have:
 
-- A Dockerfile created for the application.
-- A Docker image built successfully.
-- A local Docker image ready to be pushed to Amazon ECR.
+- A standardized `.dockerignore` file and Dockerfile for the inventory management application.
+- A Docker image named **inventory-app** built successfully on the local machine.
+- A container image ready to be tagged and pushed to Amazon Elastic Container Registry (Amazon ECR) in the next section.

@@ -47,8 +47,6 @@ AWS_REGION=ap-southeast-1
 S3_BUCKET_NAME=<your-s3-bucket>
 ```
 
-![Configure Environment Variables](/images/5-Workshop/5.3-Project-foundation/env-file.png)
-
 ---
 
 ## Start the Application
