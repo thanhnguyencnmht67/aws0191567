@@ -36,6 +36,22 @@ Review the configuration and choose **Create VPC**.
 
 ---
 
+## Enable DNS Hostnames for the VPC
+
+Navigate to:
+
+**AWS Console → VPC → Your VPCs**
+
+When **VPC only** is selected, AWS may disable DNS Hostnames by default. Enable DNS settings so internal domain name resolution works correctly.
+
+Select **production-vpc**, choose **Actions**, and then select **Edit VPC settings**.
+
+Under **DNS settings**, enable **DNS resolution** and **DNS hostnames**, then choose **Save changes**.
+
+![Edit VPC settings](/images/5-Workshop/5.4-Networking/create-vpc.png)
+
+---
+
 ## Verify the VPC
 
 Navigate to:
@@ -51,7 +67,7 @@ Select **production-vpc** and verify the following settings:
 | DNS Resolution | Enabled |
 | DNS Hostnames | Enabled |
 
-Confirm that the VPC has been created successfully before proceeding to the networking configuration.
+Confirm that the VPC has been created successfully before proceeding to create subnets and route tables.
 
 ![VPC Details](/images/5-Workshop/5.4-Networking/vpc-details.png)
 
@@ -64,4 +80,4 @@ After completing this section, you will have:
 - A Virtual Private Cloud named **production-vpc**.
 - A private networking environment with the IPv4 CIDR block **10.0.0.0/16**.
 - DNS Resolution and DNS Hostnames enabled.
-- A VPC ready for configuring subnets and networking resources.
+- A VPC ready for configuring subnets and other networking resources.

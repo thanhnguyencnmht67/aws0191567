@@ -18,11 +18,9 @@ pre : " <b> 5.4.1. </b> "
 
 
 
-Trong phần này, bạn sẽ tạo một **Virtual Private Cloud (VPC)** để xây dựng môi trường mạng riêng cho ứng dụng trên AWS.
+Trong phần này, bạn sẽ tạo một **Virtual Private Cloud (VPC)** để xây dựng môi trường mạng riêng cho ứng dụng **Warehouse Inventory Management** trên AWS.
 
-
-
-VPC là nền tảng của toàn bộ hạ tầng mạng. Tất cả các tài nguyên như Subnet, Route Table, Internet Gateway, NAT Gateway, Application Load Balancer và Amazon ECS sẽ được triển khai bên trong VPC này.
+VPC là nền tảng của toàn bộ hạ tầng mạng. Tất cả các tài nguyên như Subnet, Route Table, Internet Gateway, Application Load Balancer và Amazon ECS Fargate sẽ được triển khai bên trong VPC này.
 
 
 
@@ -74,6 +72,35 @@ Kiểm tra lại cấu hình và chọn **Create VPC**.
 
 
 
+## Bật DNS Hostnames cho VPC
+
+
+
+Truy cập:
+
+
+
+Mặc định khi chọn "VPC only", AWS sẽ tắt DNS Hostnames. Cần bật lại để dịch vụ phân giải tên miền nội bộ hoạt động
+
+
+
+Tạo danh sách **VPC only**, tích chọn  **inventory-vpc** 
+
+Bấm menu **Action**, chọn**Edit VPC settings** 
+
+Tại phần **DNS setting**, tích chọn  **Enable DNS resolution và Enable DNS hostname** 
+
+
+Bấm **Save changes**.
+
+
+
+![Create VPC](/images/5-Workshop/5.4-Networking/create-vpc.png)
+
+
+---
+
+
 ## Kiểm tra VPC
 
 
@@ -86,7 +113,7 @@ Truy cập:
 
 
 
-Chọn **production-vpc** và kiểm tra các thông tin sau:
+Bấm vào **inventor-vpc** và kiểm tra các thông tin hiển thị:
 
 
 
@@ -104,7 +131,7 @@ Chọn **production-vpc** và kiểm tra các thông tin sau:
 
 
 
-Xác nhận VPC đã được tạo thành công trước khi chuyển sang bước cấu hình mạng.
+Xác nhận VPC đã được tạo thành công trước khi chuyển sang bước tạo Subnet và Route Table.
 
 
 
@@ -124,7 +151,7 @@ Sau khi hoàn thành phần này, bạn sẽ có:
 
 
 
-- Một Virtual Private Cloud tên **production-vpc**.
+- Một Virtual Private Cloud tên **inventory-vpc**.
 
 - Môi trường mạng riêng với dải địa chỉ **10.0.0.0/16**.
 
