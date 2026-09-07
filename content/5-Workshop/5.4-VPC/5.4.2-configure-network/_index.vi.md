@@ -8,36 +8,41 @@ pre : " <b> 5.4.2. </b> "
 
 ## Cấu hình mạng
 
-Sau khi tạo Virtual Private Cloud (VPC), bước tiếp theo là cấu hình các thành phần mạng cần thiết cho ứng dụng.
+Sau khi tạo Virtual Private Cloud (VPC), bước tiếp theo là cấu hình các thành phần mạng cần thiết để các dịch vụ có thể kết nối ra Internet và giao tiếp với MongoDB Atlas.
 
-Trong phần này, bạn sẽ tạo các Public Subnet và Private Subnet, cấu hình Internet Gateway, NAT Gateway, Route Table và Security Group. Những thành phần này giúp ứng dụng giao tiếp an toàn giữa Internet, Application Load Balancer, Amazon ECS và các dịch vụ AWS khác.
+Trong phần này, bạn sẽ tạo 2 Public Subnet trên 2 Availability Zones (AZs) khác nhau, gắn Internet Gateway và cấu hình Route Table để định tuyến lưu lượng mạng.
 
 ---
 
-## Tạo Public Subnet và Private Subnet
+## Tạo Public Subnet
 
 Truy cập:
 
 **AWS Console → VPC → Subnets → Create subnet**
 
-Tạo bốn Subnet với cấu hình sau:
+Tại mục **VPC ID**, chọn inventor-vpc
+
+
+Điền thông tin tạo 2 Subnet:
 
 | Name | Availability Zone | IPv4 CIDR |
 |------|-------------------|------------|
 | public-subnet-a | ap-southeast-1a | 10.0.1.0/24 |
 | public-subnet-b | ap-southeast-1b | 10.0.2.0/24 |
-| private-subnet-a | ap-southeast-1a | 10.0.3.0/24 |
-| private-subnet-b | ap-southeast-1b | 10.0.4.0/24 |
 
-Đối với hai Public Subnet, bật tùy chọn **Auto-assign public IPv4 address**.
+Bật tính năng tự cấp Public IP cho cả 2 Subnet:
 
-Sau khi tạo hoàn tất, kiểm tra danh sách Subnet để đảm bảo tất cả các Subnet đã được tạo thành công.
+Chọn **inventory-public-subnet-a** - **Action** - **Edit** - **Subnet setting **, Tích chọn **Enable auto-assign public IPv4 address** - **save**
+
+Lặp lại thao tác trên cho **inventory-public-subnet-b**.
 
 ![Subnets](/images/5-Workshop/5.4-Networking/subnets.png)
 
 ---
 
 ## Cấu hình Internet Gateway
+
+Internet Gateway cho phép các tài nguyên bên trong VPC kết nối ra mạng Internet công cộng.
 
 Truy cập:
 
@@ -47,7 +52,7 @@ Cấu hình:
 
 | Thuộc tính | Giá trị |
 |------------|----------|
-| Name | production-igw |
+| Name | inventory-igw |
 
 Sau khi tạo:
 
@@ -60,114 +65,55 @@ Kiểm tra trạng thái Internet Gateway là **Attached**.
 
 ---
 
-## Cấu hình NAT Gateway
 
-Truy cập:
-
-**AWS Console → VPC → NAT Gateways → Create NAT gateway**
-
-Cấu hình:
-
-| Thuộc tính | Giá trị |
-|------------|----------|
-| Name | production-nat |
-| Subnet | public-subnet-a |
-| Connectivity type | Public |
-| Elastic IP | Allocate Elastic IP |
-
-Đợi NAT Gateway chuyển sang trạng thái **Available** trước khi tiếp tục.
-
-![NAT Gateway](/images/5-Workshop/5.4-Networking/nat-gateway.png)
-
----
 
 ## Cấu hình Route Table
 
-Truy cập:
-
-**AWS Console → VPC → Route Tables**
-
-Tạo hai Route Table:
-
-| Route Table | Associated Subnets | Default Route |
-|-------------|--------------------|---------------|
-| public-rt | public-subnet-a, public-subnet-b | Internet Gateway |
-| private-rt | private-subnet-a, private-subnet-b | NAT Gateway |
-
-Cấu hình Route:
-
-### Public Route Table
-
-| Destination | Target |
-|-------------|--------|
-| 0.0.0.0/0 | Internet Gateway |
-
-### Private Route Table
-
-| Destination | Target |
-|-------------|--------|
-| 0.0.0.0/0 | NAT Gateway |
-
-Sau khi cấu hình, liên kết (Associate) đúng Route Table với các Subnet tương ứng.
-
-![Route Tables](/images/5-Workshop/5.4-Networking/route-tables.png)
-
----
-
-## Cấu hình Security Group
+Route Table quy định đường đi của các gói tin mạng từ Subnet ra Internet Gateway để ứng dụng kết nối ra Internet và giao tiếp với MongoDB Atlas.
 
 Truy cập:
 
-**AWS Console → EC2 → Security Groups**
+**AWS Console → VPC → Route Tables → Create route table**
 
-Tạo hai Security Group.
-
-### Application Load Balancer Security Group
+Tạo Route Table:
 
 | Thuộc tính | Giá trị |
-|------------|----------|
-| Name | production-alb-sg |
-| VPC | production-vpc |
+|------------|---------|
+| Tên (Name) | inventory-public-rt |
+| VPC | inventory-vpc |
 
-Inbound Rules
-
-| Type | Port | Source |
-|------|------|---------|
-| HTTP | 80 | 0.0.0.0/0 |
-| HTTPS | 443 | 0.0.0.0/0 |
-
-Outbound Rules
-
-| Type | Destination |
-|------|-------------|
-| All Traffic | 0.0.0.0/0 |
+Bấm **Create route table**.
 
 ---
 
-### Amazon ECS Security Group
+### Cấu hình Tuyến đường (Routes)
 
-| Thuộc tính | Giá trị |
-|------------|----------|
-| Name | production-ecs-sg |
-| VPC | production-vpc |
+Chọn `inventory-public-rt`, tại tab **Routes** ở phía dưới chọn **Edit routes** và thêm đường truyền ra Internet Gateway:
 
-Inbound Rules
+| Destination | Target |
+|-------------|--------|
+| 0.0.0.0/0 | inventory-igw (Internet Gateway) |
 
-| Type | Port | Source |
-|------|------|---------|
-| Custom TCP | 3000 | production-alb-sg |
+Bấm **Save changes**.
 
-Outbound Rules
-
-| Type | Destination |
-|------|-------------|
-| All Traffic | 0.0.0.0/0 |
-
-Sau khi hoàn tất, xác nhận cả hai Security Group đã được tạo thành công.
-
-![Security Groups](/images/5-Workshop/5.4-Networking/security-groups.png)
+![Public Route Table Routes](/images/5-Workshop/5.4-Networking/route-table-routes.png)
 
 ---
+
+### Liên kết Subnet (Subnet Associations)
+
+Tại tab **Subnet associations**, chọn **Edit subnet associations**, tích chọn cả 2 Public Subnet để áp dụng bảng định tuyến:
+
+- `inventory-public-subnet-a`
+- `inventory-public-subnet-b`
+
+Bấm **Save associations**.
+
+![Subnet Associations](/images/5-Workshop/5.4-Networking/subnet-associations.png)
+
+---
+
+
 
 ## Kết quả mong đợi
 
