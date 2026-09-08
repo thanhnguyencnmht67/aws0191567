@@ -22,7 +22,7 @@ MongoDB Atlas stores product information, inventory categories, stock quantities
 **Deployment → Database**
 
 3. Choose the **M0 (Free Tier)**, select **AWS**, and choose **Singapore (ap-southeast-1)** to reduce latency from the VPC.
-4. Enter a cluster name, such as `Cluster0` or `InventoryCluster`, and choose **Create Deployment**.
+4. Enter a cluster name, such as Cluster0 or InventoryCluster, and choose **Create Deployment**.
 
 5. After creation, verify that the cluster status is **Available** or **Active**.
 

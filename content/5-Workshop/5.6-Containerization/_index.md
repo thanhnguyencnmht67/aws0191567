@@ -28,7 +28,7 @@ After completion, the container image stored in Amazon ECR will be the primary a
 
 Complete the following sections in order:
 
-- **4.6.1 Build the Docker image** (create the Dockerfile and `.dockerignore`, then build the image on AWS CloudShell)
+- **4.6.1 Build the Docker image** (create the Dockerfile and .dockerignore, then build the image on AWS CloudShell)
 - **4.6.2 Create a private repository and push the Docker image to Amazon ECR** (create the repository, authenticate Docker, tag the image, and push it to ECR)
 
 ---
@@ -37,7 +37,7 @@ Complete the following sections in order:
 
 After completing this chapter, you will have:
 
-- A standardized Dockerfile and `.dockerignore` for the inventory application.
+- A standardized Dockerfile and .dockerignore for the inventory application.
 - An Amazon ECR private repository named **inventory-app**.
-- A Docker container image built successfully for the `linux/amd64` architecture on AWS CloudShell.
+- A Docker container image built successfully for the linux/amd64 architecture on AWS CloudShell.
 - An image tagged and securely stored in Amazon ECR, ready for configuring the ECS task definition in Chapter 4.7.

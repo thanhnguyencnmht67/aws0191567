@@ -117,7 +117,7 @@ The project is implemented through these phases:
 # 6. Risks and Mitigation
 
 - **Missing IAM permissions:** Grant the task role the permissions required to upload files to Amazon S3.
-- **Missing environment variables:** Configure `S3_BUCKET_NAME`, `AWS_REGION`, and `MONGODB_URI` in the ECS task definition.
+- **Missing environment variables:** Configure S3_BUCKET_NAME, AWS_REGION, and MONGODB_URI in the ECS task definition.
 - **Unhealthy target group:** Verify that the container responds with HTTP 200 on the health check path.
 - **Unexpected charges:** Delete the ECS service, cluster, load balancer, target group, and S3 bucket after testing.
 

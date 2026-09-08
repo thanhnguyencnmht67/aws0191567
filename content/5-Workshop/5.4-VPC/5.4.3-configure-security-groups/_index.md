@@ -39,7 +39,7 @@ Configure the basic information:
 
 ### Outbound Rules
 
-Keep the default rule: All traffic to `0.0.0.0/0`.
+Keep the default rule: All traffic to 0.0.0.0/0.
 
 Choose **Create security group**.
 
@@ -68,7 +68,7 @@ Configure the basic information:
 
 ### Outbound Rules
 
-Keep the default rule: All traffic to `0.0.0.0/0`. This allows the container to download the Docker image from ECR and connect to MongoDB Atlas.
+Keep the default rule: All traffic to 0.0.0.0/0. This allows the container to download the Docker image from ECR and connect to MongoDB Atlas.
 
 Choose **Create security group**.
 

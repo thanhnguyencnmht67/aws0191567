@@ -20,7 +20,7 @@ The streamlined network architecture includes:
 - Amazon VPC: A logically isolated virtual network dedicated to the system.
 - Public Subnets: Host the Application Load Balancer (ALB) and ECS Fargate tasks.
 - Internet Gateway (IGW): Allows resources in the VPC to connect to the Internet so users can access the application and the application can communicate with MongoDB Atlas.
-- Route Table: Routes network traffic through the Internet Gateway (0.0.0.0/0 $\rightarrow$ igw).
+- Route Table: Routes network traffic through the Internet Gateway (0.0.0.0/0  igw).
 - Security Groups: Act as virtual firewalls to securely control traffic for the ALB and ECS tasks.
 
 ---

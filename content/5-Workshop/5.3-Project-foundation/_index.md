@@ -36,7 +36,7 @@ Wait until the installation completes successfully.
 
 ## Configure the Environment Variables
 
-Create a `.env` file in the project root directory and provide the service connection information.
+Create a .env file in the project root directory and provide the service connection information.
 
 Example:
 
@@ -78,6 +78,6 @@ http://localhost
 After completing this section, you will have:
 
 - The complete source structure for the Warehouse Inventory Management application.
-- All required dependencies installed in `node_modules`.
-- A correctly configured `.env` file connected to MongoDB Atlas and Amazon S3.
+- All required dependencies installed in node_modules.
+- A correctly configured .env file connected to MongoDB Atlas and Amazon S3.
 - The application running successfully locally, with inventory in/out functions and the user interface tested.

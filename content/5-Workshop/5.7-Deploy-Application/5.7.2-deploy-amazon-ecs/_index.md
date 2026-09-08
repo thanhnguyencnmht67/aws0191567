@@ -16,7 +16,7 @@ The deployment process includes creating the ECS cluster, configuring a task def
 
 ## Create an ECS Cluster
 
-Navigate to **Amazon ECS → Clusters → Create cluster** and create a cluster named `inventory-cluster` using AWS Fargate.
+Navigate to **Amazon ECS → Clusters → Create cluster** and create a cluster named inventory-cluster using AWS Fargate.
 
 ![Create ECS Cluster](/images/5-Workshop/5.7-Deploy-Application/5.7.2.1.png)
 
@@ -24,7 +24,7 @@ Navigate to **Amazon ECS → Clusters → Create cluster** and create a cluster 
 
 ## Create an ECS Cluster
 
-Navigate to **Amazon ECS -> Clusters -> Create cluster** and create a cluster named `inventory-cluster` using AWS Fargate.
+Navigate to **Amazon ECS -> Clusters -> Create cluster** and create a cluster named inventory-cluster using AWS Fargate.
 
 ![Create ECS Cluster](/images/5-Workshop/5.7-Deploy-Application/5.7.2.1.png)
 

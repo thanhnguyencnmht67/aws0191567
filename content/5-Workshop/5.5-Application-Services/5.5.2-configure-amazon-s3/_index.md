@@ -35,9 +35,9 @@ Confirm the public access warning and choose **Create bucket**.
 
 ## Configure the Bucket Policy
 
-To allow users to view inventory images directly in the web interface, configure a public read policy for `s3:GetObject`.
+To allow users to view inventory images directly in the web interface, configure a public read policy for s3:GetObject.
 
-Navigate to **the bucket → Permissions → Bucket policy → Edit** and replace `<your-bucket-name>` with the actual bucket name:
+Navigate to **the bucket → Permissions → Bucket policy → Edit** and replace <your-bucket-name> with the actual bucket name:
 
 ```json
 {

@@ -112,5 +112,5 @@ After completing this section, you will have:
 
 - Two public subnets in different Availability Zones (ap-southeast-1a and ap-southeast-1b) with automatic public IP assignment enabled.
 - An Internet Gateway named **inventory-igw** successfully attached to **inventory-vpc**.
-- A public Route Table named **inventory-public-rt** routing all `0.0.0.0/0` traffic through the Internet Gateway and associated with both subnets.
+- A public Route Table named **inventory-public-rt** routing all 0.0.0.0/0 traffic through the Internet Gateway and associated with both subnets.
 - A networking infrastructure ready for Security Group configuration in the next section.

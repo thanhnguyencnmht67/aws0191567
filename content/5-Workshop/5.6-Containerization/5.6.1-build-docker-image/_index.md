@@ -8,7 +8,7 @@ pre : " <b> 4.6.1. </b> "
 
 ## Build Docker Image
 
-In this section, you will create a Dockerfile, a `.dockerignore` file, and build a Docker image for the Warehouse Inventory Management application.
+In this section, you will create a Dockerfile, a .dockerignore file, and build a Docker image for the Warehouse Inventory Management application.
 
 Docker packages the application source code and its dependencies into an isolated container, ensuring a consistent runtime environment between the local development machine and Amazon ECS Fargate.
 
@@ -73,9 +73,9 @@ docker build -t inventory-app .
 Docker performs the following operations during the build process:
 
 1. Downloads the Node.js 20 Alpine base image from Docker Hub if it is not available locally.
-2. Creates the `/app` working directory inside the container.
+2. Creates the /app working directory inside the container.
 3. Installs the application dependencies using **npm install**.
-4. Copies the project source code into the container, excluding files listed in `.dockerignore`.
+4. Copies the project source code into the container, excluding files listed in .dockerignore.
 5. Packages the application into a complete Docker image.
 
 To verify that the image was created successfully, run:
@@ -92,6 +92,6 @@ The command displays all Docker images stored on the local machine. Confirm that
 
 After completing this section, you will have:
 
-- A standardized `.dockerignore` file and Dockerfile for the inventory management application.
+- A standardized .dockerignore file and Dockerfile for the inventory management application.
 - A Docker image named **inventory-app** built successfully on the local machine.
 - A container image ready to be tagged and pushed to Amazon Elastic Container Registry (Amazon ECR) in the next section.

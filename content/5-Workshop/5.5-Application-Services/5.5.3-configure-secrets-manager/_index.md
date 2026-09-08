@@ -27,10 +27,10 @@ Enter the following application configuration values. Replace the example values
 | Key | Example value |
 | :--- | :--- |
 | PORT | 80 |
-| MONGODB_URI | `mongodb+srv://inventory_admin:<password>@cluster0...` |
+| MONGODB_URI | mongodb+srv://inventory_admin:<password>@cluster0... |
 | AWS_REGION | ap-southeast-1 |
-| S3_BUCKET_NAME | `<your-bucket-name>` |
-| SESSION_SECRET | `<generate-a-strong-secret>` |
+| S3_BUCKET_NAME | <your-bucket-name> |
+| SESSION_SECRET | <generate-a-strong-secret> |
 
 Choose **Next** to continue.
 
@@ -55,7 +55,7 @@ Keep automatic rotation disabled unless a rotation strategy has been configured,
 
 ## Get the Secret ARN
 
-Open `inventory-app-secrets`, copy its **Secret ARN**, and use that ARN when configuring the Amazon ECS task definition.
+Open inventory-app-secrets, copy its **Secret ARN**, and use that ARN when configuring the Amazon ECS task definition.
 
 ---
 
@@ -65,7 +65,7 @@ Navigate to:
 
 **AWS Console → Secrets Manager → Secrets**
 
-Confirm that `inventory-app-secrets` appears in the list.
+Confirm that inventory-app-secrets appears in the list.
 
 The application will retrieve this secret during deployment on Amazon ECS.
 

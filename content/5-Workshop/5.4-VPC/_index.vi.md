@@ -20,7 +20,7 @@ Kiến trúc mạng tinh gọn bao gồm:
 - Amazon VPC: Môi trường mạng ảo cô lập logic dành riêng cho hệ thống.
 - Public Subnets: Chứa Application Load Balancer (ALB) và các Task ECS Fargate.
 - Internet Gateway (IGW): Cho phép các tài nguyên trong VPC kết nối ra Internet để người dùng truy cập và để ứng dụng giao tiếp với MongoDB Atlas.
-- Route Table: Định tuyến lưu lượng mạng đi qua Internet Gateway (0.0.0.0/0 $\rightarrow$ igw).
+- Route Table: Định tuyến lưu lượng mạng đi qua Internet Gateway (0.0.0.0/0 igw).
 - Security Groups: Thiết lập tường lửa ảo kiểm soát lưu lượng truy cập an toàn cho ALB và ECS Task.
 
 ---
