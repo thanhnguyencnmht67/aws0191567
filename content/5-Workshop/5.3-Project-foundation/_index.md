@@ -1,9 +1,9 @@
 ---
 title : "Prepare Project"
-date : 2026-01-01
+date: 2026-09-07
 weight : 3
 chapter : false
-pre : " <b> 5.3. </b> "
+pre : " <b> 4.3. </b> "
 ---
 
 ## Prepare the Project
@@ -70,7 +70,6 @@ Open a web browser and navigate to:
 http://localhost
 ```
 
-![Run the Application](/images/5-Workshop/5.3-Project-foundation/run-localhost.png)
 
 ---
 

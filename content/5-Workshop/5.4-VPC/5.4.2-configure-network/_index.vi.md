@@ -1,9 +1,9 @@
 ---
 title : "Cấu hình mạng"
-date : 2026-01-01
+date: 2026-09-07
 weight : 2
 chapter : false
-pre : " <b> 5.4.2. </b> "
+pre : " <b> 4.4.2. </b> "
 ---
 
 ## Cấu hình mạng
@@ -36,7 +36,6 @@ Chọn **inventory-public-subnet-a → Action → Edit Subnet setting → Tích 
 
 Lặp lại thao tác trên cho **inventory-public-subnet-b**.
 
-![Subnets](/images/5-Workshop/5.4-Networking/subnets.png)
 
 ---
 
@@ -57,11 +56,10 @@ Cấu hình:
 Sau khi tạo:
 
 - Chọn **Attach to VPC**
-- Chọn **production-vpc**
+- Chọn **inventory-vpc**
 
 Kiểm tra trạng thái Internet Gateway là **Attached**.
 
-![Internet Gateway](/images/5-Workshop/5.4-Networking/internet-gateway.png)
 
 ---
 
@@ -96,7 +94,6 @@ Chọn inventory-public-rt, tại tab **Routes** ở phía dưới chọn **Edit
 
 Bấm **Save changes**.
 
-![Public Route Table Routes](/images/5-Workshop/5.4-Networking/route-table-routes.png)
 
 ---
 
@@ -108,8 +105,6 @@ Tại tab **Subnet associations**, chọn **Edit subnet associations**, tích ch
 - inventory-public-subnet-b
 
 Bấm **Save associations**.
-
-![Subnet Associations](/images/5-Workshop/5.4-Networking/subnet-associations.png)
 
 ---
 

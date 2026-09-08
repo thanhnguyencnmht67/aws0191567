@@ -1,43 +1,35 @@
 ---
-title: "Nhật ký công việc"
-date: 2024-01-01
-weight: 1
-chapter: false
-pre: " <b> 1. </b> "
+title : "Nhật ký công việc"
+date: 2026-09-07
+weight : 1
+chapter : false
+pre : " <b> 1. </b> "
 ---
 
-# Nhật ký công việc
+#### ** NHẬT KÝ CÔNG VIỆC **
+Dưới đây là nhật ký công việc chi tiết của tôi qua 12 tuần thực hiện chương trình thực tập First Cloud AI Journey:
 
-Phần này trình bày quá trình thực tập trong **12 tuần**. Trong suốt thời gian thực tập, tôi đã thực hiện theo một lộ trình học tập và thực hành có hệ thống, bắt đầu từ các dịch vụ AWS cơ bản, sau đó từng bước thiết kế, phát triển, triển khai và vận hành một ứng dụng hoàn chỉnh trên nền tảng điện toán đám mây.
+**Tuần 1:** [Tìm kiếm nơi thực tập]({{< relref "1.1-Week1">}})  
+  
+**Tuần 2:** [Tìm hiểu tổng quan kiến trúc AWS và lập tài khoản thực hành]({{< relref "1.2-Week2">}}) 
+   
+**Tuần 3:** [Tìm hiểu AWS Core Services: EC2, S3, IAM]({{< relref "1.3-Week3">}})  
+  
+**Tuần 4:** [Tìm hiểu AWS Networking: VPC, Subnet, Internet Gateway]({{< relref "1.4-Week4">}})  
+  
+**Tuần 5:** [Tìm hiểu AWS RDS và DynamoDB]({{< relref "1.5-Week5">}})  
+  
+**Tuần 6:** [Tìm hiểu AWS Lambda và Serverless]({{< relref "1.6-Week6">}})  
+  
+**Tuần 7:** [Tìm hiểu AWS CloudWatch và CloudTrail]({{< relref "1.7-Week7">}})  
+  
+**Tuần 8:** [Tìm hiểu Elastic Load Balancer (ELB) và Auto Scaling]({{< relref "1.8-Week8">}})  
+  
+**Tuần 9:** [Tìm hiểu AWS CloudFormation và Infrastructure as Code (IaC)]({{< relref "1.9-Week9">}}) 
+   
+**Tuần 10:** [Tìm hiểu AWS ECS và Docker cơ bản]({{< relref "1.10-Week10">}})  
+  
+**Tuần 11:** [Tìm hiểu AWS DevOps cơ bản và quy trình CI/CD]({{< relref "1.11-Week11">}})  
+  
+**Tuần 12:** [Thực hiện dự án tổng hợp trên AWS và tổng kết đánh giá]({{< relref "1.12-Week12">}})  
 
-Trong tám tuần đầu, tôi tập trung tìm hiểu và thực hành các dịch vụ cốt lõi của AWS như IAM, EC2, VPC, Amazon S3, Amazon RDS, Security Groups, Network ACL, Amazon Route 53, Application Load Balancer, Amazon CloudWatch, Docker, Amazon ECS và các khái niệm về CI/CD. Đây là nền tảng quan trọng để triển khai đề tài thực tập.
-
-Từ tuần 9, tôi bắt đầu chuẩn bị cho đề tài thực tập bằng việc nghiên cứu công nghệ, thiết kế kiến trúc hệ thống, phát triển ứng dụng và triển khai toàn bộ hệ thống lên AWS Cloud.
-
-Đề tài thực tập **TechMarket E-Commerce Platform** đã được xây dựng và triển khai thành công với các dịch vụ Amazon ECS Fargate, Amazon ECR, Amazon S3, MongoDB Atlas, Application Load Balancer, Amazon Route 53, AWS Certificate Manager (ACM), Amazon CloudWatch và AWS CodeBuild.
-
-Nội dung công việc của từng tuần được trình bày như sau:
-
-**Tuần 1:** [Làm quen với AWS: IAM, EC2, VPC, Amazon S3 và AWS CLI](1.1-week1/)
-
-**Tuần 2:** [Amazon S3 Security, IAM Role, Amazon RDS và triển khai ứng dụng Web](1.2-week2/)
-
-**Tuần 3:** [Mạng và bảo mật trên AWS](1.3-week3/)
-
-**Tuần 4:** [Scaling, Load Balancer và High Availability](1.4-week4/)
-
-**Tuần 5:** [Giám sát hệ thống với Amazon CloudWatch](1.5-week5/)
-
-**Tuần 6:** [AWS Systems Manager và quản lý tài nguyên](1.6-week6/)
-
-**Tuần 7:** [Infrastructure as Code, Docker và Amazon ECS cơ bản](1.7-week7/)
-
-**Tuần 8:** [Triển khai Amazon ECS và tìm hiểu CI/CD](1.8-week8/)
-
-**Tuần 9:** [Ôn tập kiến thức AWS và chuẩn bị cho đề tài thực tập](1.9-week9/)
-
-**Tuần 10:** [Lên ý tưởng đề tài và thiết kế kiến trúc hệ thống](1.10-week10/)
-
-**Tuần 11:** [Phát triển ứng dụng và hoàn thiện các chức năng](1.11-week11/)
-
-**Tuần 12:** [Triển khai hệ thống lên AWS, kiểm thử và hoàn thành đề tài](1.12-week12/)

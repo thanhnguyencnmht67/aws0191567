@@ -1,47 +1,36 @@
 ---
-title: "Tự đánh giá"
-date: 2024-01-01
-weight: 6
-chapter: false
-pre: " <b> 6. </b> "
+title : "Tự đánh giá"
+date: 2026-09-07
+weight : 5
+chapter : false
+pre : " <b> 5. </b> "
 ---
 
+Trong suốt thời gian thực tập tại **Công ty TNHH Amazon Web Services Việt Nam (AWS Việt Nam)** từ ngày **15/06/2026** đến ngày **06/09/2026**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng các kiến thức chuyên ngành Mạng và Hệ thống Thông tin từ trường Đại học Xây dựng Hà Nội vào môi trường thực tế.
 
-Trong quá trình tham gia chương trình **First Cloud AI Journey (FCAJ)**, tôi đã tích lũy được nhiều kiến thức thông qua tài liệu học AWS, các bài thực hành (hands-on labs), workshop kỹ thuật, nghiên cứu blog và worklog hằng tuần.
+Trong đợt thực tập này, tôi đã tham gia chương trình **Workforce Bootcamp - First Cloud AI Journey**, hoàn thành chuỗi bài học và thực hành lab về hạ tầng đám mây AWS như **EC2, S3, IAM, VPC, RDS, Lambda, CloudWatch, Auto Scaling, CloudFormation, Docker/ECS và CI/CD**. Thông qua đó, tôi đã củng cố đáng kể năng lực cấu hình an toàn hệ thống, quản lý tài nguyên đám mây và nâng cao kỹ năng làm việc nhóm cũng như viết báo cáo kỹ thuật.
 
-Trong suốt chương trình, tôi đã hoàn thành nhiều nội dung học tập liên quan đến các dịch vụ cốt lõi của AWS như IAM, EC2, VPC, S3, RDS, Networking, Auto Scaling, CloudWatch, Containers, Security và Serverless Computing. Tôi cũng đã tham gia các sự kiện Community Day và các buổi chia sẻ kỹ thuật, giúp tôi hiểu rõ hơn cách các công nghệ AWS được áp dụng trong môi trường thực tế.
+Để phản ánh một cách khách quan quá trình học tập và rèn luyện của bản thân, tôi xin tự đánh giá dựa trên các tiêu chí dưới đây:
 
-Bên cạnh việc nâng cao kiến thức chuyên môn, tôi còn phát triển các kỹ năng thực tiễn như thiết kế kiến trúc Cloud, viết tài liệu kỹ thuật, giải quyết vấn đề, làm việc nhóm và tự học.
+| STT | Tiêu chí | Mô tả | Tốt | Khá | Trung bình |
+|---:|---|---|:---:|:---:|:---:|
+| 1 | **Kiến thức và kỹ năng chuyên môn** | Hiểu biết về dịch vụ AWS, thiết lập hệ thống an toàn, chất lượng thực hành lab | ☐ | ✅ | ☐ |
+| 2 | **Khả năng học hỏi** | Tốc độ tiếp thu kiến thức mới về Cloud và các công cụ công nghệ | ✅ | ☐ | ☐ |
+| 3 | **Chủ động** | Tự tìm hiểu tài liệu nghiên cứu, hoàn thành bài tập mà không cần thúc nhắc | ☐ | ✅ | ☐ |
+| 4 | **Tinh thần trách nhiệm** | Đảm bảo hoàn thành các task và worklog đúng thời hạn đề ra | ✅ | ☐ | ☐ |
+| 5 | **Kỷ luật** | Tuân thủ giờ giấc tham gia các buổi workshop và nội quy chương trình | ✅ | ☐ | ☐ |
+| 6 | **Tính cầu tiến** | Tiếp nhận ý kiến đóng góp từ người hướng dẫn để cải thiện kết quả | ✅ | ☐ | ☐ |
+| 7 | **Giao tiếp** | Khả năng trao đổi kỹ thuật, trình bày ý kiến rõ ràng | ☐ | ✅ | ☐ |
+| 8 | **Hợp tác nhóm** | Làm việc, chia sẻ tài liệu và hỗ trợ các thành viên khác trong nhóm học tập | ✅ | ☐ | ☐ |
+| 9 | **Ứng xử chuyên nghiệp** | Thái độ tôn trọng người hướng dẫn, bạn học và giữ tác phong nghiêm túc | ✅ | ☐ | ☐ |
+| 10 | **Tư duy giải quyết vấn đề** | Nhận diện lỗi cấu hình và tìm phương án khắc phục (troubleshooting) | ☐ | ✅ | ☐ |
+| 11 | **Đóng góp vào dự án/tổ chức** | Mức độ đóng góp và hoàn thành các mục tiêu dự án tổng hợp cuối khóa | ☐ | ✅ | ☐ |
+| 12 | **Tổng thể** | Đánh giá chung về kết quả rèn luyện trong suốt đợt thực tập | ☐ | ✅ | ☐ |
 
-## Tự đánh giá
+### Định hướng cải thiện bản thân
 
-| STT | Tiêu chí | Tốt | Khá | Trung bình |
-| --- | ------------------------------ | :--: | :--: | :--------: |
-| 1 | Kiến thức kỹ thuật AWS | ✅ | | |
-| 2 | Khả năng học hỏi | ✅ | | |
-| 3 | Kỹ năng thực hành | ✅ | | |
-| 4 | Tinh thần trách nhiệm | ✅ | | |
-| 5 | Quản lý thời gian | | ✅ | |
-| 6 | Tinh thần cầu tiến | ✅ | | |
-| 7 | Kỹ năng giao tiếp | | ✅ | |
-| 8 | Làm việc nhóm | ✅ | | |
-| 9 | Tác phong chuyên nghiệp | ✅ | | |
-| 10 | Khả năng giải quyết vấn đề | | ✅ | |
-| 11 | Tham gia các hoạt động học tập | ✅ | | |
-| 12 | Đánh giá tổng thể | ✅ | | |
+- **Kiến thức chuyên môn**: Tích lũy thêm kinh nghiệm thực tế về cấu hình bảo mật chuyên sâu (**Security Best Practices**) và xử lý sự cố mạng phức tạp trên AWS.
 
----
+- **Kỹ năng giải quyết vấn đề (Troubleshooting)**: Rèn luyện tính kiên nhẫn khi phân tích logs hệ thống (**CloudWatch Logs**) để chủ động tìm ra nguyên nhân gốc rễ của lỗi trước khi tìm kiếm sự hỗ trợ.
 
-# Điểm cần cải thiện
-
-- Tìm hiểu thêm các dịch vụ AWS nâng cao.
-- Cải thiện kỹ năng thiết kế kiến trúc Cloud.
-- Tích lũy thêm kinh nghiệm thực tế trong các dự án.
-- Nâng cao kỹ năng thuyết trình kỹ thuật.
-- Tiếp tục tham gia các hoạt động cộng đồng AWS.
-
----
-
-# Kết luận
-
-Chương trình FCAJ đã giúp tôi nâng cao đáng kể kiến thức và kỹ năng thực hành về AWS Cloud. Thông qua quá trình học tập liên tục, thực hành và tham gia các hoạt động cộng đồng, tôi đã xây dựng được nền tảng vững chắc để theo đuổi sự nghiệp trong lĩnh vực Điện toán đám mây.
+- **Kỹ năng giao tiếp và thuyết trình**: Tập trung trình bày các báo cáo kỹ thuật một cách ngắn gọn, mạch lạc và súc tích hơn.

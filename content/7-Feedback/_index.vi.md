@@ -1,48 +1,54 @@
 ---
-title: "Chia sẻ, đóng góp ý kiến"
-date: 2024-01-01
-weight: 7
-chapter: false
-pre: " <b> 7. </b> "
+title : "Chia sẻ, đóng góp ý kiến"
+date: 2026-09-07
+weight : 6
+chapter : false
+pre : " <b> 6. </b> "
 ---
 
+Sau thời gian tham gia chương trình **First Cloud AI Journey**, có cơ hội tiếp cận nhiều kiến thức mới về Cloud, AWS và cách triển khai các giải pháp trên môi trường thực tế. Dưới đây là một số nhận xét và đóng góp nhằm góp phần giúp chương trình ngày càng hoàn thiện hơn.
 
+### Đánh giá chung về chương trình
 
-### Đánh giá chung
+**1. Nội dung đào tạo và lộ trình học tập**
 
-**1. Đánh giá tổng quan**  
-Tham gia chương trình First Cloud AI Journey là một trải nghiệm học tập rất bổ ích. Chương trình kết hợp giữa lý thuyết, các bài thực hành (hands-on labs), các buổi chia sẻ kỹ thuật và hoạt động cộng đồng, giúp người học từng bước xây dựng nền tảng kiến thức thực tiễn về AWS.
+Nội dung chương trình được xây dựng theo hướng từ kiến thức nền tảng đến thực hành, giúp từng bước làm quen với môi trường AWS. Các bài lab và tài liệu đi kèm tạo điều kiện chủ động tìm hiểu và kiểm chứng kiến thức thông qua thực hành.
 
-**2. Môi trường học tập**  
-Môi trường học tập thân thiện và luôn sẵn sàng hỗ trợ. Các mentor và thành viên trong cộng đồng luôn nhiệt tình giải đáp thắc mắc và chia sẻ những kinh nghiệm thực tế.
+**2. Hoạt động Workshop và chia sẻ kiến thức**
 
-**3. Sự hỗ trợ của mentor**  
-Các mentor giải thích rõ ràng, dễ hiểu và luôn khuyến khích người học tự tìm tòi, suy nghĩ thay vì chỉ đưa ra đáp án. Sự hướng dẫn của mentor giúp tôi hiểu sâu hơn về các khái niệm và kiến trúc AWS.
+Các buổi workshop mang lại nhiều góc nhìn thực tế từ những người có kinh nghiệm trong ngành. Những chia sẻ về cách công nghệ Cloud được sử dụng trong doanh nghiệp giúp hiểu rõ hơn sự khác biệt giữa kiến thức lý thuyết và yêu cầu thực tế khi triển khai hệ thống.
 
-**4. Trải nghiệm học tập**  
-Lộ trình học bao gồm nhiều dịch vụ AWS từ cơ bản đến nâng cao, giúp tôi dễ dàng hiểu được cách xây dựng và vận hành các hệ thống Cloud trong môi trường thực tế.
+**3. Cơ hội thực hành trên AWS**
 
-**5. Những kỹ năng đạt được**  
-Thông qua chương trình, tôi đã cải thiện được:
+Điểm nổi bật của chương trình là cơ hội thực hành trực tiếp trên các dịch vụ AWS. Qua quá trình xây dựng **VPC, Subnet, Route Table, NAT Gateway, EC2, IAM** và các dịch vụ giám sát, có thể hiểu rõ hơn mối quan hệ giữa các thành phần trong một hệ thống Cloud.
 
-- Kiến thức về AWS Cloud.
-- Kỹ năng sử dụng Linux.
-- Kiến thức nền tảng về Networking.
-- Hiểu biết về kiến trúc Cloud.
-- Kỹ năng viết tài liệu kỹ thuật.
-- Khả năng tự học.
+**4. Phát triển tư duy giải quyết vấn đề**
 
----
+Trong quá trình thực hành, nhiều lỗi cấu hình phát sinh đòi hỏi phải chủ động đọc log, kiểm tra cấu hình và tìm nguyên nhân trước khi đưa ra hướng xử lý. Qua đó, khả năng phân tích và giải quyết vấn đề được cải thiện thay vì chỉ thực hiện theo hướng dẫn có sẵn.
 
-### Đề xuất
+**5. Kết nối với cộng đồng công nghệ**
 
-- Bổ sung thêm các tình huống và kiến trúc hệ thống thực tế.
-- Tổ chức thêm nhiều workshop thực hành.
-- Tiếp tục cập nhật tài liệu theo các dịch vụ AWS mới.
-- Tăng thêm cơ hội để học viên trao đổi và chia sẻ kinh nghiệm dự án.
+Chương trình tạo ra môi trường để các thực tập sinh cùng trao đổi kiến thức, chia sẻ kinh nghiệm và hỗ trợ nhau trong quá trình học tập. Đây là một yếu tố tích cực giúp tăng động lực tìm hiểu sâu hơn về Cloud và các công nghệ liên quan.
 
 ---
 
-### Cảm nghĩ cuối cùng
+### Trả lời câu hỏi khảo sát
 
-Tôi đánh giá cao sự nỗ lực của các mentor và ban tổ chức trong việc xây dựng cộng đồng học tập này. Chương trình **First Cloud AI Journey** đã tạo động lực để tôi tiếp tục học tập AWS Cloud và theo đuổi định hướng nghề nghiệp trong lĩnh vực **Cloud Computing**.
+- **Điều ấn tượng nhất trong chương trình?**
+
+  Hình thức học kết hợp giữa lý thuyết, workshop và thực hành trực tiếp trên AWS là điểm ấn tượng nhất. Cách tiếp cận này giúp kiến thức được củng cố thông qua quá trình tự triển khai và xử lý các vấn đề phát sinh.
+
+- **Điều chương trình có thể cải thiện?**
+
+  Có thể bổ sung thêm các bài lab theo tình huống thực tế, trong đó đưa ra một yêu cầu tổng quát để người học tự phân tích, lựa chọn dịch vụ, thiết kế kiến trúc và triển khai hệ thống trước khi đối chiếu với hướng dẫn.
+
+- **Có giới thiệu chương trình cho những sinh viên khác không?**
+
+  Có. Chương trình phù hợp với những sinh viên muốn tìm hiểu Cloud và AWS theo hướng thực hành, đồng thời mong muốn có thêm trải nghiệm gần với môi trường làm việc thực tế.
+
+---
+
+### Đề xuất & Mong muốn
+
+- **Đề xuất:** Bổ sung thêm các bài tập dạng **Mini Project** theo nhóm, tập trung vào việc phân tích yêu cầu, thiết kế kiến trúc, triển khai và giám sát một hệ thống hoàn chỉnh trên AWS.
+- **Mong muốn:** Tiếp tục duy trì các hoạt động workshop và chia sẻ kinh nghiệm thực tế, đồng thời mở rộng thêm các chủ đề về **Cloud Security, DevOps, AI và Automation trên AWS**.

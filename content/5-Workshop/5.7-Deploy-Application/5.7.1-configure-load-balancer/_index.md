@@ -1,14 +1,14 @@
 ---
 title : "Configure Load Balancer"
-date : 2026-01-01
+date: 2026-09-07
 weight : 1
 chapter : false
-pre : " <b> 5.7.1. </b> "
+pre : " <b> 4.7.1. </b> "
 ---
 
 ## Configure Load Balancer
 
-In this section, you will configure an Application Load Balancer (ALB) for the Second-Hand Marketplace application.
+In this section, you will configure an Application Load Balancer (ALB) for the Warehouse Inventory Management application.
 
 The Application Load Balancer receives incoming HTTP requests from users and forwards them to the Amazon ECS service through a target group.
 
@@ -26,13 +26,13 @@ Configure the target group using the following settings.
 |----------|-------|
 | Target type | IP addresses |
 | Protocol | HTTP |
-| Port | 3000 |
-| VPC | production-vpc |
-| Target group name | production-target-group |
+| Port | 80 |
+| VPC | inventory-vpc |
+| Target group name | inventory-tg |
 
 Choose **Next**, keep the default health check configuration, and create the target group.
 
-![Create Target Group](/images/5-Workshop/5.7-Deploy-Application/create-target-group.png)
+![Create Target Group](/images/5-Workshop/5.7-Deploy-Application/5.7.1.1.png)
 
 ---
 
@@ -46,15 +46,15 @@ Select **Application Load Balancer** and configure the following settings.
 
 | Property | Value |
 |----------|-------|
-| Load Balancer name | production-alb |
+| Load Balancer name | inventory-alb |
 | Scheme | Internet-facing |
 | IP address type | IPv4 |
-| VPC | production-vpc |
+| VPC | inventory-vpc |
 | Availability Zones | Public Subnets |
 
 Select the security group created for the Application Load Balancer and continue.
 
-![Create Load Balancer](/images/5-Workshop/5.7-Deploy-Application/create-load-balancer.png)
+![Create Load Balancer](/images/5-Workshop/5.7-Deploy-Application/5.7.1.2.png)
 
 ---
 
@@ -66,11 +66,11 @@ Configure the default listener for the Application Load Balancer.
 |----------|-------|
 | Protocol | HTTP |
 | Port | 80 |
-| Default action | Forward to production-target-group |
+| Default action | Forward to inventory-tg |
 
 Review the configuration and choose **Create Load Balancer**.
 
-![Configure Listener](/images/5-Workshop/5.7-Deploy-Application/configure-listener.png)
+![Configure Listener](/images/5-Workshop/5.7-Deploy-Application/5.7.1.3.png)
 
 ---
 
@@ -86,7 +86,9 @@ Open the Application Load Balancer and verify that:
 - The listener is configured successfully.
 - The target group is associated with the load balancer.
 
-![Load Balancer Details](/images/5-Workshop/5.7-Deploy-Application/load-balancer-details.png)
+![Load Balancer Listeners](/images/5-Workshop/5.7-Deploy-Application/5.7.1.4.png)
+
+![Load Balancer Details](/images/5-Workshop/5.7-Deploy-Application/5.7.1.5.png)
 
 ---
 

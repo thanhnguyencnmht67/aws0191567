@@ -1,46 +1,30 @@
 ---
-title: "Nhật ký công việc tuần 10"
-date: 2026-04-12
-weight: 10
-chapter: false
-pre: " <b> 1.10. </b> "
+title : "WorkLog Tuần 10"
+date: 2026-09-07
+weight : 10
+chapter : false
+pre : " <b> 1.10 </b> "
 ---
 
-### Mục tiêu tuần 10:
-
-* Chuẩn bị cho đề tài thực tập.
-* Nghiên cứu công nghệ và thiết kế kiến trúc ban đầu của hệ thống.
-
-### Công việc thực hiện trong tuần:
-
-| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành |
-| --- | --------- | ------------ | ---------------- |
-| 2 | Nghiên cứu các ý tưởng đề tài và trao đổi về yêu cầu của hệ thống | 13/10/2025 | 13/10/2025 |
-| 3 | Lựa chọn đề tài và xác định các công nghệ sẽ sử dụng | 14/10/2025 | 14/10/2025 |
-| 4 | Nghiên cứu Node.js, Express.js và MongoDB Atlas để phát triển Backend | 15/10/2025 | 15/10/2025 |
-| 5 | Thiết kế kiến trúc ban đầu của hệ thống và cơ sở dữ liệu | 16/10/2025 | 16/10/2025 |
-| 6 | Thiết lập môi trường phát triển và khởi tạo mã nguồn dự án | 17/10/2025 | 17/10/2025 |
-
-### Kết quả đạt được trong tuần 10:
-
-* Nghiên cứu và đánh giá các ý tưởng cho đề tài thực tập.
-
-* Lựa chọn đề tài thực tập: **Nền tảng thương mại điện tử TechMarket**.
-
-* Xác định các công nghệ sử dụng trong dự án gồm:
-  * Node.js
-  * Express.js
-  * MongoDB Atlas
-  * Amazon S3
-  * Docker
-  * Amazon ECS Fargate
-
-* Hoàn thành thiết kế kiến trúc ban đầu của hệ thống.
-
-* Thiết kế cấu trúc cơ sở dữ liệu MongoDB.
-
-* Thiết lập thành công môi trường phát triển.
-
-* Khởi tạo mã nguồn của dự án.
-
-* Chuẩn bị đầy đủ nền tảng để bắt đầu giai đoạn phát triển và triển khai hệ thống.
+### Mục tiêu tuần 10  
+  
+  - Khám phá Docker cơ bản và dịch vụ điều phối container AWS Elastic Container Service (ECS).
+  - Nắm bắt khái niệm về Container và Container Orchestration.
+  - Thực hành tạo Docker Image của ứng dụng từ Dockerfile.
+  - Triển khai container ứng dụng trên AWS ECS và kiểm tra hoạt động.
+  
+### Các công việc cần triển khai trong tuần này:  
+  
+  | Thứ | Công việc                                                                                         | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                         |
+|-----:|---------------------------------------------------------------------------------------------------|--------------|-----------------|----------------------------------------|
+| 2    | Tìm hiểu AWS ECS và kiến thức Docker cơ bản                                                      | 17/08/2026   | 19/08/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 3    | Tìm hiểu lý thuyết về Container và Container Orchestration                                       | 19/08/2026   | 20/08/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 4    | Thực hành viết Dockerfile và build Docker Image từ ứng dụng mẫu                                  | 20/08/2026   | 21/08/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 5    | Triển khai container trên AWS ECS (Fargate/EC2) và kiểm tra hoạt động                            | 21/08/2026   | 22/08/2026      | https://cloudjourney.awsstudygroup.com/ |  
+  
+### Kết quả đạt được tuần 10:  
+  
+  - Nắm vững cách Docker đóng gói ứng dụng độc lập với môi trường.
+  - Viết thành công Dockerfile và tạo Docker image chạy tốt ở local.
+  - Đẩy image lên kho lưu trữ và cấu hình Task Definition trên AWS ECS.
+  - Triển khai và chạy ứng dụng web thành công trên cluster của AWS ECS Fargate.  

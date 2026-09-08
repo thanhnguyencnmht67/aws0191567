@@ -1,9 +1,9 @@
 ---
 title : "Cấu hình Amazon S3"
-date : 2026-01-01
+date: 2026-09-07
 weight : 2
 chapter : false
-pre : " <b> 5.5.2. </b> "
+pre : " <b> 4.5.2. </b> "
 ---
 
 ## Cấu hình Amazon S3
@@ -32,7 +32,7 @@ Cấu hình các thông số sau:
 
 Xác nhận cảnh báo công khai và chọn **Create bucket**.
 
-![Create S3 Bucket](/images/5-Workshop/5.5-Application-Services/create-s3-bucket.png)
+![Create S3 Bucket](/images/5-Workshop/5.5-Application-Services/5.5.2.1.png)
 
 ---
 

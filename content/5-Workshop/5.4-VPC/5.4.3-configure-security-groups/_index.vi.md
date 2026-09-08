@@ -1,9 +1,9 @@
 ---
 title : "Cấu hình Security Group"
-date : 2026-01-01
+date: 2026-09-07
 weight : 3
 chapter : false
-pre : " <b> 5.4.3. </b> "
+pre : " <b> 4.4.3. </b> "
 ---
 
 ## Cấu hình Security Group
@@ -42,7 +42,6 @@ Giữ nguyên mặc định: All traffic tới 0.0.0.0/0.
 
 Bấm **Create security group**.
 
-![ALB Security Group](/images/5-Workshop/5.4-Networking/alb-sg.png)
 
 ---
 
@@ -72,7 +71,6 @@ Giữ nguyên mặc định: All traffic tới 0.0.0.0/0 (đảm bảo container
 
 Bấm **Create security group**.
 
-![ECS Security Group](/images/5-Workshop/5.4-Networking/ecs-sg.png)
 
 ---
 

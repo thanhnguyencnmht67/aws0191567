@@ -1,138 +1,79 @@
 ---
-title: "Sự kiện 1 - FCAJ Community Day"
-date: 2026-05-23
-weight: 1
-chapter: false
-pre: " <b> 4.1. </b> "
+title : "Event 1"
+date: 2026-09-07
+weight : 4
+chapter : false
+pre : " <b> 4.1 </b> "
 ---
 
-# FCAJ Community Day
+## Bài thu hoạch "FCAJ Community"  
+  
+### Thông tin chung về sự kiện  
+   
+**Tên Sự Kiện**: AWS VIETNAM COMMUNITY MEETUP AI REVOLUTION & OPEN CLAW 
 
-## Thông tin sự kiện
+**Thời gian tổ chức:** 25/07/2026
 
-| Mục | Chi tiết |
-|------|---------|
-| **Tên sự kiện** | FCAJ Community Day – AWS First Cloud AI Journey |
-| **Ngày** | Thứ Bảy, 23/05/2026 |
-| **Thời gian** | 09:00 – 12:00 (GMT+7) |
-| **Địa điểm** | Tầng 26, Tòa nhà Bitexco Financial Tower, TP. Hồ Chí Minh |
-| **Vai trò** | Người tham dự |
+**Địa điểm tổ chức:** Tầng 7, Grand Terra Tower, 36 Cát Linh, Đống Đa, Hà Nội.
 
----
+**Đơn vị tổ chức:** Team AWS VIETNAM COMMUNITY First Cloud Journey  
 
-# Báo cáo tổng kết
+**Vai trò tham gia:** Người tham dự  
 
-## Mục tiêu của sự kiện
+### Mục Đích Của Sự Kiện  
+- Cập nhật các xu hướng AI mới nhất trên AWS  
+- Giới thiệu ứng dụng AI Agent và Open-Source AI  
+- Chia sẻ cách lựa chọn AI Agent Pattern phù hợp  
+- Khám phá cách chuyển AI thành giá trị thực tế cho doanh nghiệp  
+- Kết nối và trao đổi kinh nghiệm với cộng đồng AWS Việt Nam  
 
-FCAJ Community Day được tổ chức nhằm giới thiệu những công nghệ mới nhất về điện toán đám mây (Cloud Computing) và Trí tuệ nhân tạo tạo sinh (Generative AI) thông qua các buổi chia sẻ thực tế từ các chuyên gia AWS và các kỹ sư giàu kinh nghiệm. Sự kiện cũng tạo cơ hội cho sinh viên và lập trình viên tìm hiểu các giải pháp Cloud trong thực tế, khám phá các công cụ phát triển ứng dụng sử dụng AI và kết nối với cộng đồng AWS.
+### Danh sách diễn giả:  
+- Henry Đức Bùi — Head of Engineering tại CloudThinker  
+  - Chủ đề chia sẻ: Ship Fast with AI, Not by AI  
+- Nguyễn Thu (Yuna) — Chuyên gia giải pháp / Kinh doanh AI  
+  - Chủ đề chia sẻ: From AI Trends to Business Value - Sales Track  
+- Nam Lã — Cloud Engineer tại Cloudino / AWS Vietnam User Group Admin  
+  - Chủ đề chia sẻ: AI Trends Through the Lens of an Infrastructure Engineer  
+- Tuấn Vũ: AWS Community Builder
+  - Chủ đề chia sẻ: OpenClaw - The Rise and Practice of Open-Source AI Agents
+  
+### Nội Dung Nổi Bật
 
----
+- **Hiện trạng và bất cập:** GenAI và các công cụ hỗ trợ lập trình giúp tăng đáng kể tốc độ viết code (Inner Loop). Tuy nhiên, quá trình đưa sản phẩm vào thực tế (Outer Loop) vẫn có thể bị hạn chế bởi các bước đánh giá, kiểm thử, tích hợp và triển khai.
+- **Giải pháp cho Outer Loop:** Không chỉ tập trung vào việc xây dựng các mô hình AI mạnh hơn mà còn chú trọng tự động hóa quy trình thông qua Lint rules, CI checks, Skills và tài liệu hướng dẫn trong Repository.
+- **Xu hướng hạ tầng:** Hoạt động quản lý hạ tầng Cloud đang dần chuyển từ cách tiếp cận phản ứng (Reactive) sang chủ động (Proactive) thông qua AIOps, FinOps và Proactive Security. Xu hướng tương lai hướng đến hạ tầng có khả năng tự động quản lý và tối ưu với sự hỗ trợ của AI Agent.
+- **Ứng dụng AI trong thực tế:** AI đang dần trở thành công cụ hỗ trợ trong nhiều hoạt động như phát triển phần mềm, vận hành hệ thống, phân tích dữ liệu và tối ưu hóa hạ tầng.
 
-## Diễn giả
+### Những Gì Học Được
 
-- Tinh Truong
-- Anh Pham
-- Thinh Nguyen
-- Team VIB
-- Duc Dao
-- Vy Lam
+- **Thay đổi cách đánh giá code do AI tạo ra:** Tập trung vào cấu trúc thiết kế, cách các thành phần giao tiếp với nhau và các rủi ro liên quan đến trạng thái, xử lý lỗi và bảo mật thay vì chỉ kiểm tra từng dòng code.
+- **Tự động hóa và lưu trữ kiến thức:** Chuyển các quy tắc và lỗi thường gặp thành tài liệu, Lint rules hoặc Skills để có thể tái sử dụng trong các phiên làm việc khác nhau.
+- **Tăng cường kiểm thử:** Tận dụng AI để hỗ trợ tạo Test Cases và các công cụ kiểm thử cho những chức năng quan trọng, từ đó nâng cao độ tin cậy của hệ thống.
+- **Thay đổi vai trò của kỹ sư:** Vai trò của kỹ sư ngày càng chuyển từ việc thao tác trực tiếp trên hệ thống sang thiết kế, kiểm soát và giám sát các hệ thống có sự hỗ trợ của AI.
 
----
+### Ứng Dụng Vào Quá Trình Học Tập
 
-# Những nội dung nổi bật
+- **Tổ chức tài liệu trong Repository:** Tìm hiểu cách xây dựng tài liệu và các quy tắc dự án ngay trong Repository để hỗ trợ cả quá trình phát triển và sử dụng AI Agent.
+- **Tìm hiểu Inner Loop và Outer Loop:** Làm rõ cách AI có thể hỗ trợ từ quá trình viết code, kiểm thử đến tích hợp và triển khai phần mềm.
+- **Tìm hiểu AIOps và FinOps:** Tiếp cận cách sử dụng AI để phát hiện bất thường, giám sát hệ thống và tối ưu chi phí khi vận hành Cloud.
+- **Phát triển kỹ năng làm việc với AI:** Rèn luyện Prompt Engineering, Context Engineering và tìm hiểu các cơ chế kiểm soát như Guardrails và Rollback.
+- **Liên hệ với kiến thức AWS:** Mở rộng góc nhìn về Cloud Infrastructure, Monitoring, Cost Optimization và Security thông qua các nội dung thực tế được chia sẻ tại sự kiện.
 
-## Context Is Everything: Making AI Actually Work for You
+### Trải Nghiệm Trong Event
 
-- Tầm quan trọng của Context trong hệ thống AI
-- Prompt Engineering và AI Memory
-- Định hướng nghề nghiệp cho người học AI
+- **Góc nhìn thực tế:** Tiếp cận AI từ khía cạnh Infrastructure và Software Development thay vì chỉ tập trung vào mô hình AI hoặc Data Science.
+- **Hiểu rõ hơn vai trò của AI:** Nhận thức rõ AI nên được sử dụng như công cụ hỗ trợ và mở rộng năng lực của kỹ sư, thay vì thay thế hoàn toàn tư duy và khả năng đánh giá của con người.
+- **Tiếp cận xu hướng công nghệ mới:** Làm quen với các khái niệm như Agentic AI, AIOps, FinOps và xu hướng xây dựng hạ tầng tự động.
+- **Định hướng học tập:** Bổ sung góc nhìn thực tế cho quá trình học Cloud, Infrastructure, Software Development và AI, đồng thời định hướng các kỹ năng cần tiếp tục phát triển.
+- **Thông điệp ghi nhớ:** *"Ship fast with AI, not by it"* nhấn mạnh việc sử dụng AI như một công cụ để tăng năng suất, nâng cao chất lượng và hỗ trợ quá trình phát triển hệ thống.
 
-## Friendly AI Assistant with Amazon Quick
+### Bài Học Rút Ra
 
-- Xây dựng trợ lý AI
-- Quy trình làm việc thông minh
-- Dashboard bằng ngôn ngữ tự nhiên
-- Cộng tác nhóm với Quick Spaces
+- **AI là công cụ hỗ trợ, không thay thế tư duy:** Việc sử dụng AI hiệu quả cần đi kèm với khả năng kiểm tra, đánh giá và đưa ra quyết định của con người.
+- **Tập trung vào chất lượng thay vì chỉ tốc độ:** Tốc độ tạo code nhanh không đồng nghĩa với tốc độ hoàn thành sản phẩm. Cần chú trọng kiểm thử, tích hợp, triển khai và đảm bảo chất lượng hệ thống.
+- **Ưu tiên tự động hóa các công việc lặp lại:** Các quy tắc, lỗi thường gặp và quy trình kiểm tra nên được tự động hóa thông qua Lint rules, CI/CD và tài liệu hướng dẫn.
+- **Củng cố kiến thức về Cloud Infrastructure:** Cần tiếp tục tìm hiểu sâu hơn về Monitoring, Security, Cost Optimization và Automation để có nền tảng tốt cho việc vận hành hệ thống Cloud.
+- **Chủ động học hỏi về Agentic AI:** Việc AI Agent ngày càng tham gia nhiều hơn vào quá trình phát triển và vận hành hệ thống đòi hỏi khả năng xây dựng Context, Prompt và các cơ chế kiểm soát phù hợp.
+- **Phát triển tư duy thiết kế và giám sát hệ thống:** Bên cạnh kỹ năng thao tác trực tiếp, cần chú trọng khả năng phân tích kiến trúc, nhận diện rủi ro và kiểm soát hoạt động của hệ thống.
+- **Kết hợp kiến thức lý thuyết với thực tế:** Các nội dung được chia sẻ tại sự kiện giúp liên hệ kiến thức về AWS, Cloud và Software Development với những xu hướng công nghệ đang được áp dụng trong thực tế.  
 
-## From Edge To Origin: CloudFront as Your Foundation
-
-- Kiến trúc Amazon CloudFront
-- Tối ưu hiệu năng
-- Khả năng bảo mật
-- Cải thiện độ tin cậy
-- Tối ưu chi phí
-
-## 36 hrs with LotusHacks – Building UTMorpho from Idea to Reality
-
-- Quá trình lên ý tưởng
-- Phát triển sản phẩm AI trong 36 giờ
-- Kiến trúc và trình diễn sản phẩm
-- Những khó khăn trong quá trình phát triển
-- Bài học từ cuộc thi Hackathon
-
-## Non-Determinism of "Deterministic" LLM Settings
-
-- Cách LLM tạo ra câu trả lời
-- Vì sao Temperature = 0 vẫn không hoàn toàn xác định
-- Ảnh hưởng trong thực tế
-- Các giải pháp khắc phục
-
-## Enterprise-Grade Multi-Agent System
-
-- Kiến trúc hệ thống Multi-Agent AI
-- Chấm điểm tín dụng cho Startup
-- Guardrails và Compliance
-- Lộ trình triển khai cho doanh nghiệp
-
----
-
-# Kiến thức tiếp thu
-
-## Điện toán đám mây
-
-- Amazon CloudFront giúp cải thiện hiệu năng, bảo mật và độ tin cậy của ứng dụng.
-- Có thể kết hợp nhiều dịch vụ AWS để xây dựng các ứng dụng AI có khả năng mở rộng.
-
-## Trí tuệ nhân tạo
-
-- Context ảnh hưởng rất lớn đến chất lượng phản hồi của AI.
-- Hiểu cơ chế suy luận của LLM giúp xây dựng hệ thống AI hiệu quả hơn.
-- AI nên hỗ trợ lập trình viên thay vì thay thế hoàn toàn.
-
-## Phát triển phần mềm
-
-- Hackathon giúp nâng cao kỹ năng làm việc nhóm và giải quyết vấn đề nhanh.
-- Xây dựng MVP cần cân bằng giữa tốc độ, chất lượng và giá trị cho người dùng.
-
-## Phát triển nghề nghiệp
-
-- Giao lưu với các chuyên gia AWS giúp mở rộng kiến thức chuyên môn.
-- Các sự kiện cộng đồng khuyến khích việc học tập liên tục và định hướng nghề nghiệp.
-
----
-
-# Cảm nhận sau sự kiện
-
-Tham gia FCAJ Community Day là một trải nghiệm rất hữu ích trong quá trình học AWS của tôi. Sự kiện giúp tôi tiếp cận các kiến thức thực tế về điện toán đám mây và những ứng dụng AI hiện đại thông qua các buổi chia sẻ kỹ thuật.
-
-Tôi đặc biệt ấn tượng với phần trình bày về Amazon CloudFront vì nội dung đã giới thiệu nhiều kỹ thuật thực tế để cải thiện hiệu năng và bảo mật cho ứng dụng. Phiên chia sẻ về LotusHacks cũng truyền cảm hứng khi cho thấy một nhóm có thể biến ý tưởng thành sản phẩm AI hoàn chỉnh chỉ trong 36 giờ.
-
-Ngoài kiến thức chuyên môn, tôi còn có cơ hội giao lưu với các chuyên gia Cloud, trao đổi với những người tham dự khác và hiểu rõ hơn về xu hướng phát triển của ngành.
-
----
-
-# Bài học rút ra
-
-- Context chất lượng sẽ tạo ra kết quả AI tốt hơn.
-- CloudFront là một dịch vụ quan trọng của AWS trong phân phối nội dung.
-- Làm việc nhóm và giao tiếp là yếu tố quan trọng trong các dự án phần mềm.
-- Học tập liên tục là điều cần thiết đối với kỹ sư Cloud.
-- Tham gia cộng đồng giúp mở rộng cả kiến thức kỹ thuật và các mối quan hệ nghề nghiệp.
-
----
-
-# Hình ảnh sự kiện
-
-## Check-in
-
-![Check-in tại FCAJ Community Day](/images/checkin.jpg)

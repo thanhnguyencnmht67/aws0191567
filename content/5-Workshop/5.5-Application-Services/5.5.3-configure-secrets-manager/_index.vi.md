@@ -1,9 +1,9 @@
 ---
 title : "Cấu hình AWS Secrets Manager"
-date : 2026-01-01
+date: 2026-09-07
 weight : 3
 chapter : false
-pre : " <b> 5.5.3. </b> "
+pre : " <b> 4.5.3. </b> "
 ---
 
 ## Cấu hình AWS Secrets Manager
@@ -32,7 +32,6 @@ Chọn loại Secret:
 | S3_BUCKET_NAME | inventory0191567-097040011859-ap-southeast-1-an | Tên S3 Bucket lưu trữ hình ảnh |
 | SESSION_SECRET | WarehouseSecretKey2026!@# | Chuỗi khóa bí mật cho phiên làm việc |
 
-![Store Secret](/images/5-Workshop/5.5-Application-Services/create-secret-keys.png)
 
 Chọn **Next**.
 
@@ -46,7 +45,6 @@ Chọn **Next**.
 
 Xem lại toàn bộ thông tin và chọn **Store**.
 
-![Secret Details](/images/5-Workshop/5.5-Application-Services/secret-details.png)
 
 ---
 

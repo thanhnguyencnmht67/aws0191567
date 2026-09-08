@@ -1,9 +1,9 @@
 ---
 title : "Configure Amazon S3"
-date : 2026-01-01
+date: 2026-09-07
 weight : 2
 chapter : false
-pre : " <b> 5.5.2. </b> "
+pre : " <b> 4.5.2. </b> "
 ---
 
 ## Configure Amazon S3
@@ -32,7 +32,6 @@ Configure the bucket using the following settings.
 
 Confirm the public access warning and choose **Create bucket**.
 
-![Create S3 Bucket](/images/5-Workshop/5.5-Application-Services/create-s3-bucket.png)
 
 ## Configure the Bucket Policy
 
@@ -67,7 +66,6 @@ Upload one or more product images and documents that will be used by the applica
 
 After the upload is complete, verify that the objects appear in the bucket.
 
-![Upload Objects](/images/5-Workshop/5.5-Application-Services/upload-images.png)
 
 ---
 
@@ -81,7 +79,6 @@ Confirm that the uploaded images are available in the bucket.
 
 These images will be accessed by the application when displaying product information.
 
-![Bucket Objects](/images/5-Workshop/5.5-Application-Services/bucket-object.png)
 
 ---
 

@@ -1,9 +1,9 @@
 ---
 title : "Chuẩn bị dự án"
-date : 2026-01-01
+date: 2026-09-07
 weight : 3
 chapter : false
-pre : " <b> 5.3. </b> "
+pre : " <b> 4.3. </b> "
 ---
 
 ## Chuẩn bị dự án
@@ -67,7 +67,6 @@ Mở trình duyệt web và truy cập địa chỉ:
 http://localhost
 ```
 
-![Chạy ứng dụng](/images/5-Workshop/5.3-Project-foundation/run-localhost.png)
 
 ---
 

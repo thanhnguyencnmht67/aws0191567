@@ -1,9 +1,9 @@
 ---
 title : "Hạ tầng mạng"
-date : 2026-01-01
+date: 2026-09-07
 weight : 4
 chapter : false
-pre : " <b> 5.4. </b> "
+pre : " <b> 4.4. </b> "
 ---
 
 ### Mục tiêu
@@ -31,9 +31,9 @@ Kiến trúc mạng tinh gọn bao gồm:
 
 Thực hiện lần lượt các bước cấu hình:
 
-- **5.4.1 Tạo VPC và các Public Subnet**
-- **5.4.2 Cấu hình Internet Gateway và Route Table**
-- **5.4.3 Thiết lập Security Group cho Application Load Balancer (ALB) và Amazon ECS**
+- **4.4.1 Tạo VPC và các Public Subnet**
+- **4.4.2 Cấu hình Internet Gateway và Route Table**
+- **4.4.3 Thiết lập Security Group cho Application Load Balancer (ALB) và Amazon ECS**
 ---
 
 ## 4. Kết quả mong đợi

@@ -1,9 +1,9 @@
 ---
 title : "Build Docker Image"
-date : 2026-01-01
+date: 2026-09-07
 weight : 1
 chapter : false
-pre : " <b> 5.6.1. </b> "
+pre : " <b> 4.6.1. </b> "
 ---
 
 ## Build Docker Image
@@ -57,7 +57,6 @@ CMD ["npm", "start"]
 
 Save the Dockerfile after completing the configuration.
 
-![Dockerfile](/images/5-Workshop/5.6-Containerization/dockerfile.png)
 
 ---
 

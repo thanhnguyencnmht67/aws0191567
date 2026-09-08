@@ -2,13 +2,13 @@
 
 title : "Tạo VPC"
 
-date : 2026-01-01
+date: 2026-09-07
 
 weight : 1
 
 chapter : false
 
-pre : " <b> 5.4.1. </b> "
+pre : " <b> 4.4.1. </b> "
 
 ---
 
@@ -50,7 +50,7 @@ Chọn **VPC only**, sau đó cấu hình như sau:
 
 | Tài nguyên cần tạo | VPC only |
 
-| Tên | production-vpc |
+| Tên | inventory-vpc |
 
 | IPv4 CIDR | 10.0.0.0/16 |
 
@@ -64,7 +64,7 @@ Kiểm tra lại cấu hình và chọn **Create VPC**.
 
 
 
-![Create VPC](/images/5-Workshop/5.4-Networking/create-vpc.png)
+![Create VPC](/images/5-Workshop/5.4-VPC/5.4.1.1.png)
 
 
 
@@ -95,7 +95,7 @@ Bấm **Save changes**.
 
 
 
-![Create VPC](/images/5-Workshop/5.4-Networking/create-vpc.png)
+![Create VPC](/images/5-Workshop/5.4-VPC/5.4.1.2.png)
 
 
 ---
@@ -133,9 +133,6 @@ Bấm vào **inventor-vpc** và kiểm tra các thông tin hiển thị:
 
 Xác nhận VPC đã được tạo thành công trước khi chuyển sang bước tạo Subnet và Route Table.
 
-
-
-![VPC Details](/images/5-Workshop/5.4-Networking/vpc-details.png)
 
 
 

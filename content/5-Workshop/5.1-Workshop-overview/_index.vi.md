@@ -1,9 +1,9 @@
 ---
 title : "Tổng quan Workshop"
-date : 2026-01-01
+date: 2026-09-07
 weight : 1
 chapter : false
-pre : " <b> 5.1. </b> "
+pre : " <b> 4.1. </b> "
 ---
 
 ### Mục tiêu
@@ -36,7 +36,7 @@ Kiến trúc của hệ thống bao gồm các thành phần chính sau:
 
 **Hình 1 – Kiến trúc hệ thống Warehouse Inventory Management**
 
-![Kiến trúc hệ thống](/images/5-Workshop/5.1-Workshop-overview/system_architecture.png)
+![Kiến trúc hệ thống](/images/5-Workshop/5.1-Workshop-overview/diagram.png)
 
 ---
 

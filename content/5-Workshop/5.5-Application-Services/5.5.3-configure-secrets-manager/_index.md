@@ -1,9 +1,9 @@
 ---
 title : "Configure AWS Secrets Manager"
-date : 2026-01-01
+date: 2026-09-07
 weight : 3
 chapter : false
-pre : " <b> 5.5.3. </b> "
+pre : " <b> 4.5.3. </b> "
 ---
 
 ## Configure AWS Secrets Manager
@@ -34,7 +34,6 @@ Enter the following application configuration values. Replace the example values
 
 Choose **Next** to continue.
 
-![Store Secret](/images/5-Workshop/5.5-Application-Services/create-secret-keys.png)
 
 ---
 
@@ -51,7 +50,6 @@ Example:
 
 Choose **Next** and keep the remaining settings as default.
 
-![Secret Details](/images/5-Workshop/5.5-Application-Services/secret-details.png)
 
 Keep automatic rotation disabled unless a rotation strategy has been configured, then choose **Store**.
 
@@ -71,7 +69,6 @@ Confirm that `inventory-app-secrets` appears in the list.
 
 The application will retrieve this secret during deployment on Amazon ECS.
 
-![Secret List](/images/5-Workshop/5.5-Application-Services/secret-list.png)
 
 ---
 

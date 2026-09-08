@@ -1,6 +1,6 @@
 ---
 title: "Internship Report"
-date: 2026-04-12
+date: 2026-09-07
 weight: 1
 chapter: false
 ---
@@ -30,14 +30,12 @@ chapter: false
 
 &emsp; **Internship Duration:** From 25/07/2026 to 17/10/2026
 
-![Your profile picture](/images/avatar.jpg)
 
 ### Report Content
 
 1.  [Worklog](1-Worklog/)
 2.  [Proposal](2-Proposal/)
-3.  [BlogsPosted](3-BlogsPosted/)
-4.  [Events Participated](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Self-evaluation](6-Self-evaluation/)
-7.  [Sharing and Feedback](7-Feedback/)
+3.  [Events Participated](4-EventParticipated/)
+4.  [Workshop](5-Workshop/)
+5.  [Self-evaluation](6-Self-evaluation/)
+6.  [Sharing and Feedback](7-Feedback/)

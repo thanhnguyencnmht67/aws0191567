@@ -1,154 +1,78 @@
 ---
-title: "Sự kiện 2 - FCAJ Technical Sharing Meeting"
-date: 2026-06-06
-weight: 2
-chapter: false
-pre: " <b> 4.2. </b> "
+title : "Event 2"
+date: 2026-09-07
+weight : 4
+chapter : false
+pre : " <b> 4.2 </b> "
 ---
 
-# FCAJ Technical Sharing Meeting
+## Bài thu hoạch "FCAJ Community"  
+  
+### Thông tin chung về sự kiện  
+   
+**Tên Sự Kiện**: AWS VIETNAM COMMUNITY MEETUP AI REVOLUTION & OPEN CLAW 
 
-## Thông tin sự kiện
+**Thời gian tổ chức:** 25/07/2026
 
-| Mục | Chi tiết |
-|------|---------|
-| **Tên sự kiện** | FCAJ Technical Sharing Meeting |
-| **Ngày** | Thứ Bảy, 06/06/2026 |
-| **Thời gian** | Buổi họp hằng tuần của FCAJ |
-| **Địa điểm** | Bitexco Financial Tower, TP. Hồ Chí Minh |
-| **Vai trò** | Người tham dự |
+**Địa điểm tổ chức:** Tầng 7, Grand Terra Tower, 36 Cát Linh, Đống Đa, Hà Nội.
 
----
+**Đơn vị tổ chức:** Team AWS VIETNAM COMMUNITY First Cloud Journey  
 
-# Báo cáo tổng kết
+**Vai trò tham gia:** Người tham dự  
 
-## Mục tiêu của sự kiện
+### Mục Đích Của Sự Kiện  
+- Cập nhật các xu hướng AI mới nhất trên AWS  
+- Giới thiệu ứng dụng AI Agent và Open-Source AI  
+- Chia sẻ cách lựa chọn AI Agent Pattern phù hợp  
+- Khám phá cách chuyển AI thành giá trị thực tế cho doanh nghiệp  
+- Kết nối và trao đổi kinh nghiệm với cộng đồng AWS Việt Nam  
 
-FCAJ Technical Sharing Meeting được tổ chức nhằm cung cấp cho sinh viên những kiến thức thực tế về Điện toán đám mây (Cloud Computing), Trí tuệ nhân tạo (Artificial Intelligence), An toàn thông tin (Cybersecurity), Công nghệ Container, Hệ thống Multiplayer và định hướng phát triển nghề nghiệp. Sự kiện bao gồm nhiều bài chia sẻ kỹ thuật từ các thành viên FCAJ và các diễn giả khách mời, giúp người tham dự học hỏi từ các dự án thực tế và kinh nghiệm trong ngành.
+### Danh sách diễn giả:  
+- Henry Đức Bùi — Head of Engineering tại CloudThinker  
+  - Chủ đề chia sẻ: Ship Fast with AI, Not by AI  
+- Nguyễn Thu (Yuna) — Chuyên gia giải pháp / Kinh doanh AI  
+  - Chủ đề chia sẻ: From AI Trends to Business Value - Sales Track  
+- Nam Lã — Cloud Engineer tại Cloudino / AWS Vietnam User Group Admin  
+  - Chủ đề chia sẻ: AI Trends Through the Lens of an Infrastructure Engineer  
+- Tuấn Vũ: AWS Community Builder
+  - Chủ đề chia sẻ: OpenClaw - The Rise and Practice of Open-Source AI Agents
+  
+### Nội Dung Nổi Bật
 
----
+- **Hiện trạng và bất cập:** GenAI và các công cụ hỗ trợ lập trình giúp tăng đáng kể tốc độ viết code (Inner Loop). Tuy nhiên, quá trình đưa sản phẩm vào thực tế (Outer Loop) vẫn có thể bị hạn chế bởi các bước đánh giá, kiểm thử, tích hợp và triển khai.
+- **Giải pháp cho Outer Loop:** Không chỉ tập trung vào việc xây dựng các mô hình AI mạnh hơn mà còn chú trọng tự động hóa quy trình thông qua Lint rules, CI checks, Skills và tài liệu hướng dẫn trong Repository.
+- **Xu hướng hạ tầng:** Hoạt động quản lý hạ tầng Cloud đang dần chuyển từ cách tiếp cận phản ứng (Reactive) sang chủ động (Proactive) thông qua AIOps, FinOps và Proactive Security. Xu hướng tương lai hướng đến hạ tầng có khả năng tự động quản lý và tối ưu với sự hỗ trợ của AI Agent.
+- **Ứng dụng AI trong thực tế:** AI đang dần trở thành công cụ hỗ trợ trong nhiều hoạt động như phát triển phần mềm, vận hành hệ thống, phân tích dữ liệu và tối ưu hóa hạ tầng.
 
-## Các phiên chia sẻ
+### Những Gì Học Được
 
-- Hệ thống phát hiện xâm nhập mạng (NIDS) sử dụng Machine Learning trên AWS
-- Docker – Công nghệ Container hóa
-- Multiplayer trên Cloud với AWS WebSockets
-- Xây dựng GraphRAG bằng Amazon Bedrock và Amazon Neptune
-- Nghệ thuật làm việc nhóm hiệu quả
-- Hành trình từ IT Helpdesk đến Senior System Administrator
+- **Thay đổi cách đánh giá code do AI tạo ra:** Tập trung vào cấu trúc thiết kế, cách các thành phần giao tiếp với nhau và các rủi ro liên quan đến trạng thái, xử lý lỗi và bảo mật thay vì chỉ kiểm tra từng dòng code.
+- **Tự động hóa và lưu trữ kiến thức:** Chuyển các quy tắc và lỗi thường gặp thành tài liệu, Lint rules hoặc Skills để có thể tái sử dụng trong các phiên làm việc khác nhau.
+- **Tăng cường kiểm thử:** Tận dụng AI để hỗ trợ tạo Test Cases và các công cụ kiểm thử cho những chức năng quan trọng, từ đó nâng cao độ tin cậy của hệ thống.
+- **Thay đổi vai trò của kỹ sư:** Vai trò của kỹ sư ngày càng chuyển từ việc thao tác trực tiếp trên hệ thống sang thiết kế, kiểm soát và giám sát các hệ thống có sự hỗ trợ của AI.
 
----
+### Ứng Dụng Vào Quá Trình Học Tập
 
-# Những nội dung nổi bật
+- **Tổ chức tài liệu trong Repository:** Tìm hiểu cách xây dựng tài liệu và các quy tắc dự án ngay trong Repository để hỗ trợ cả quá trình phát triển và sử dụng AI Agent.
+- **Tìm hiểu Inner Loop và Outer Loop:** Làm rõ cách AI có thể hỗ trợ từ quá trình viết code, kiểm thử đến tích hợp và triển khai phần mềm.
+- **Tìm hiểu AIOps và FinOps:** Tiếp cận cách sử dụng AI để phát hiện bất thường, giám sát hệ thống và tối ưu chi phí khi vận hành Cloud.
+- **Phát triển kỹ năng làm việc với AI:** Rèn luyện Prompt Engineering, Context Engineering và tìm hiểu các cơ chế kiểm soát như Guardrails và Rollback.
+- **Liên hệ với kiến thức AWS:** Mở rộng góc nhìn về Cloud Infrastructure, Monitoring, Cost Optimization và Security thông qua các nội dung thực tế được chia sẻ tại sự kiện.
 
-## AWS WAF kết hợp Machine Learning để phát hiện tấn công mạng
+### Trải Nghiệm Trong Event
 
-- Khả năng và giới hạn của AWS WAF
-- So sánh phát hiện theo Rule và Machine Learning
-- Xây dựng hệ thống Network Intrusion Detection System (NIDS)
-- Dashboard giám sát theo thời gian thực
-- Triển khai giải pháp bảo mật trên AWS
-- Tích hợp AWS WAF với NIDS để tăng khả năng phát hiện tấn công
+- **Góc nhìn thực tế:** Tiếp cận AI từ khía cạnh Infrastructure và Software Development thay vì chỉ tập trung vào mô hình AI hoặc Data Science.
+- **Hiểu rõ hơn vai trò của AI:** Nhận thức rõ AI nên được sử dụng như công cụ hỗ trợ và mở rộng năng lực của kỹ sư, thay vì thay thế hoàn toàn tư duy và khả năng đánh giá của con người.
+- **Tiếp cận xu hướng công nghệ mới:** Làm quen với các khái niệm như Agentic AI, AIOps, FinOps và xu hướng xây dựng hạ tầng tự động.
+- **Định hướng học tập:** Bổ sung góc nhìn thực tế cho quá trình học Cloud, Infrastructure, Software Development và AI, đồng thời định hướng các kỹ năng cần tiếp tục phát triển.
+- **Thông điệp ghi nhớ:** *"Ship fast with AI, not by it"* nhấn mạnh việc sử dụng AI như một công cụ để tăng năng suất, nâng cao chất lượng và hỗ trợ quá trình phát triển hệ thống.
 
----
+### Bài Học Rút Ra
 
-## Docker Containerization
-
-- Virtualization và Containerization
-- Kiến trúc Docker
-- Docker Image và Docker Container
-- Trình diễn Docker trong thực tế
-- Lợi ích của việc triển khai ứng dụng bằng Container
-
----
-
-## Multiplayer trên Cloud
-
-- Kiến trúc Multiplayer
-- WebSocket Architecture
-- API Gateway WebSocket
-- Tích hợp AWS Lambda
-- DynamoDB quản lý kết nối
-- Demo hệ thống Multiplayer thời gian thực
-
----
-
-## GraphRAG với Amazon Bedrock và Amazon Neptune
-
-- Giới thiệu Retrieval-Augmented Generation (RAG)
-- Khái niệm GraphRAG
-- Amazon Bedrock Knowledge Bases
-- Amazon Neptune Analytics
-- Ứng dụng AI khai thác mối quan hệ dữ liệu
-
----
-
-## Làm việc nhóm hiệu quả
-
-- Bốn nguyên tắc vàng trong làm việc nhóm
-- Giao tiếp và phối hợp
-- Trách nhiệm cá nhân
-- Công cụ hỗ trợ cộng tác
-
----
-
-## Hành trình phát triển nghề nghiệp
-
-- Từ IT Helpdesk đến System Administrator
-- Tư duy Cloud
-- Văn hóa DevOps
-- Lộ trình phát triển nghề nghiệp
-- Học tập thông qua các dự án thực tế
-
----
-
-# Kiến thức tiếp thu
-
-## Công nghệ Cloud
-
-- Hiểu cách kết hợp các dịch vụ AWS để xây dựng ứng dụng Cloud an toàn và có khả năng mở rộng.
-- Nắm được kiến trúc sử dụng API Gateway, Lambda, DynamoDB, Amazon Bedrock, Amazon Neptune và AWS WAF.
-
-## An toàn thông tin
-
-- Machine Learning giúp tăng khả năng phát hiện các hành vi bất thường mà phương pháp Rule-based khó nhận diện.
-- Kết hợp AWS WAF với NIDS giúp nâng cao khả năng bảo vệ trước các cuộc tấn công mạng hiện đại.
-
-## Phát triển phần mềm
-
-- Docker giúp đơn giản hóa việc triển khai ứng dụng và đảm bảo tính nhất quán giữa các môi trường.
-- GraphRAG mở rộng mô hình RAG truyền thống bằng cách khai thác mối quan hệ giữa các dữ liệu.
-- WebSocket hỗ trợ giao tiếp thời gian thực cho các ứng dụng Multiplayer.
-
-## Phát triển nghề nghiệp
-
-- Làm việc nhóm hiệu quả cần có giao tiếp, mục tiêu chung, trách nhiệm và sự phối hợp.
-- Thực hành trên dự án và học tập liên tục là yếu tố quan trọng để phát triển trong lĩnh vực Cloud và DevOps.
-
----
-
-# Cảm nhận sau sự kiện
-
-FCAJ Technical Sharing Meeting mang đến cho tôi cơ hội tiếp cận nhiều chủ đề về Cloud Computing chỉ trong một buổi chia sẻ. Khác với những buổi học lý thuyết, các diễn giả tập trung vào việc trình bày những dự án thực tế và kinh nghiệm triển khai trong doanh nghiệp.
-
-Tôi đặc biệt ấn tượng với phần trình bày về AWS WAF kết hợp Machine Learning và GraphRAG vì nội dung đã cho thấy cách tích hợp các dịch vụ AWS với AI để giải quyết các bài toán thực tế. Ngoài ra, phần chia sẻ về Docker cũng giúp tôi hiểu rõ hơn về công nghệ Container – một thành phần quan trọng trong các hệ thống Cloud hiện đại.
-
-Bên cạnh kiến thức chuyên môn, tôi còn có cơ hội trao đổi với các thành viên khác trong cộng đồng, chia sẻ kinh nghiệm học tập và hiểu thêm về xu hướng công nghệ hiện nay.
-
----
-
-# Bài học rút ra
-
-- Giải pháp bảo mật hiện đại nên kết hợp giữa các phương pháp truyền thống và Machine Learning.
-- Docker là công nghệ quan trọng trong việc triển khai phần mềm hiện đại.
-- GraphRAG giúp nâng cao khả năng truy xuất tri thức nhờ khai thác mối quan hệ dữ liệu.
-- Các dự án Cloud trong thực tế đòi hỏi kỹ năng làm việc nhóm và giao tiếp hiệu quả.
-- Học tập liên tục và tham gia cộng đồng kỹ thuật giúp phát triển kỹ năng chuyên môn và nghề nghiệp.
-
----
-
-# Hình ảnh sự kiện
-
-## Tổng quan buổi chia sẻ
-
-![Meeting Overview](/images/meeting-overview.jpg)
+- **AI là công cụ hỗ trợ, không thay thế tư duy:** Việc sử dụng AI hiệu quả cần đi kèm với khả năng kiểm tra, đánh giá và đưa ra quyết định của con người.
+- **Tập trung vào chất lượng thay vì chỉ tốc độ:** Tốc độ tạo code nhanh không đồng nghĩa với tốc độ hoàn thành sản phẩm. Cần chú trọng kiểm thử, tích hợp, triển khai và đảm bảo chất lượng hệ thống.
+- **Ưu tiên tự động hóa các công việc lặp lại:** Các quy tắc, lỗi thường gặp và quy trình kiểm tra nên được tự động hóa thông qua Lint rules, CI/CD và tài liệu hướng dẫn.
+- **Củng cố kiến thức về Cloud Infrastructure:** Cần tiếp tục tìm hiểu sâu hơn về Monitoring, Security, Cost Optimization và Automation để có nền tảng tốt cho việc vận hành hệ thống Cloud.
+- **Chủ động học hỏi về Agentic AI:** Việc AI Agent ngày càng tham gia nhiều hơn vào quá trình phát triển và vận hành hệ thống đòi hỏi khả năng xây dựng Context, Prompt và các cơ chế kiểm soát phù hợp.
+- **Phát triển tư duy thiết kế và giám sát hệ thống:** Bên cạnh kỹ năng thao tác trực tiếp, cần chú trọng khả năng phân tích kiến trúc, nhận diện rủi ro và kiểm soát hoạt động của hệ thống.
+- **Kết hợp kiến thức lý thuyết với thực tế:** Các nội dung được chia sẻ tại sự kiện giúp liên hệ kiến thức về AWS, Cloud và Software Development với những xu hướng công nghệ đang được áp dụng trong thực tế.  

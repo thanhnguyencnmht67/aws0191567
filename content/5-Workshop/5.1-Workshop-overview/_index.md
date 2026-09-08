@@ -1,9 +1,9 @@
 ---
 title : "Workshop Overview"
-date : 2026-01-01
+date: 2026-09-07
 weight : 1
 chapter : false
-pre : " <b> 5.1. </b> "
+pre : " <b> 4.1. </b> "
 ---
 
 ### Goal
@@ -36,7 +36,6 @@ The system architecture consists of the following major components:
 
 **Figure 1 – Warehouse Inventory Management System Architecture**
 
-![System Architecture](/images/5-Workshop/5.1-Workshop-overview/system_architecture.png)
 
 ---
 

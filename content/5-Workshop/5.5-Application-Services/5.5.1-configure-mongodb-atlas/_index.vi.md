@@ -1,9 +1,9 @@
 ---
 title : "Cấu hình MongoDB Atlas"
-date : 2026-01-01
+date: 2026-09-07
 weight : 1
 chapter : false
-pre : " <b> 5.5.1. </b> "
+pre : " <b> 4.5.1. </b> "
 ---
 
 ## Cấu hình MongoDB Atlas
@@ -22,7 +22,7 @@ MongoDB Atlas chịu trách nhiệm lưu trữ các đối tượng dữ liệu 
 4. Đặt tên Cluster (ví dụ: Cluster0 hoặc InventoryCluster) và bấm **Create Deployment**.
 5. Sau khi tạo xong, kiểm tra trạng thái của Cluster hiển thị **Available (hoặc Active)**.
 
-![MongoDB Cluster](/images/5-Workshop/5.5-Application-Services/mongodb-cluster.png)
+![MongoDB Cluster](/images/5-Workshop/5.5-Application-Services/5.5.1.png)
 
 ---
 
@@ -43,7 +43,7 @@ Cấu hình tài khoản truy cập:
 
 Bấm **Add User** để hoàn tất.
 
-![Database User](/images/5-Workshop/5.5-Application-Services/database-user.png)
+![Database User](/images/5-Workshop/5.5-Application-Services/5.5.1.2.png)
 
 ---
 
@@ -61,8 +61,6 @@ Truy cập:
 | **Comment** | Allow ECS tasks and Local dev | Ghi chú mục đích |
 
 Bấm **Confirm** và đợi IP chuyển sang trạng thái **Active**.
-
-![Network Access](/images/5-Workshop/5.5-Application-Services/network-access.png)
 
 ---
 

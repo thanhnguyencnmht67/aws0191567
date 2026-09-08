@@ -1,9 +1,9 @@
 ---
 title : "Deploy Application"
-date : 2026-01-01
+date: 2026-09-07
 weight : 7
 chapter : false
-pre : " <b> 5.7. </b> "
+pre : " <b> 4.7. </b> "
 ---
 
 ### Goal
@@ -26,10 +26,8 @@ The deployment includes creating an ECS cluster, configuring a task definition, 
 
 Complete the following sections in order:
 
-- **5.7.1 Create the ECS Cluster**
-- **5.7.2 Create the Task Definition**
-- **5.7.3 Create the ECS Service**
-- **5.7.4 Verify the Deployment**
+- **4.7.1 Configure the Application Load Balancer**
+- **4.7.2 Deploy the Application to Amazon ECS**
 
 
 ---

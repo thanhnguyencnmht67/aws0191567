@@ -1,54 +1,41 @@
 ---
-title: "Nhật ký công việc tuần 12"
-date: 2026-04-19
-weight: 12
-chapter: false
-pre: " <b> 1.12. </b> "
+title : "WorkLog Tuần 12"
+date: 2026-09-07
+weight : 12
+chapter : false
+pre : " <b> 1.12 </b> "
 ---
 
 ### Mục tiêu tuần 12:
 
-* Triển khai ứng dụng lên nền tảng AWS.
-* Kiểm thử môi trường thực tế và hoàn thành đề tài thực tập.
+- Hoàn thiện dự án tự động hóa quản lý và kiểm tra bảo mật hạ tầng trên AWS.
+- Hoàn thiện kiến trúc AWS Infrastructure gồm VPC, Subnet, Security Group, EC2 và IAM Role.
+- Thiết lập kết nối SSH giữa Automation Server và các Managed Nodes.
+- Xây dựng và hoàn thiện hệ thống Ansible Automation để quản lý và cấu hình các Managed Nodes.
+- Xây dựng Python Security Engine để thực hiện Security Checks, xử lý Finding và tạo báo cáo.
+- Hoàn thiện cơ chế Security Audit và Automated Remediation.
+- Kiểm tra, đánh giá kết quả hoạt động của toàn bộ hệ thống và hoàn thiện báo cáo thực tập.
 
-### Công việc thực hiện trong tuần:
+### Các công việc cần triển khai trong tuần này:
 
-| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành |
-| --- | --------- | ------------ | ---------------- |
-| 2 | Đóng gói ứng dụng bằng Docker | 27/10/2025 | 27/10/2025 |
-| 3 | Đẩy Docker Image lên Amazon ECR | 28/10/2025 | 28/10/2025 |
-| 4 | Triển khai ứng dụng lên Amazon ECS Fargate | 29/10/2025 | 29/10/2025 |
-| 5 | Cấu hình Application Load Balancer, Amazon Route 53 và AWS Certificate Manager (ACM) | 30/10/2025 | 30/10/2025 |
-| 6 | Cấu hình AWS CodeBuild, giám sát bằng Amazon CloudWatch, kiểm thử hệ thống và hoàn thiện đề tài | 31/10/2025 | 31/10/2025 |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+|-----:|---|---|---|---|
+| 2 | Hoàn thiện và kiểm tra kiến trúc AWS Infrastructure cho project | 31/08/2026 | 01/09/2026 | AWS Documentation |
+| 3 | Hoàn thiện cấu hình EC2, Security Group, IAM Role và kết nối SSH giữa Automation Server và Managed Nodes | 01/09/2026 | 02/09/2026 | AWS Documentation |
+| 4 | Hoàn thiện Ansible Inventory, Playbooks, Roles và Security Policy | 02/09/2026 | 04/09/2026 | Ansible Documentation |
+| 5 | Hoàn thiện Python Security Engine, Security Checks, Finding, Reporting và Automated Remediation | 04/09/2026 | 05/09/2026 | Python Documentation |
+| 6 | Kiểm thử toàn bộ hệ thống, kiểm tra Security Audit, Remediation và Output | 05/09/2026 | 06/09/2026 | Tài liệu project |
+| 7 | Tổng kết kết quả thực tập và hoàn thiện báo cáo | 06/09/2026 | 06/09/2026 | — |
 
-### Kết quả đạt được trong tuần 12:
+### Kết quả đạt được tuần 12:
 
-* Đóng gói thành công ứng dụng bằng Docker.
-
-* Đẩy Docker Image lên Amazon ECR thành công.
-
-* Triển khai thành công ứng dụng trên Amazon ECS Fargate.
-
-* Cấu hình thành công Application Load Balancer để phân phối lưu lượng truy cập.
-
-* Cấu hình tên miền bằng Amazon Route 53.
-
-* Cấu hình chứng chỉ SSL/TLS bằng AWS Certificate Manager (ACM) để truy cập ứng dụng thông qua HTTPS.
-
-* Thiết lập AWS CodeBuild để tự động hóa quá trình build và triển khai ứng dụng.
-
-* Giám sát hoạt động của hệ thống bằng Amazon CloudWatch.
-
-* Kiểm thử thành công toàn bộ các chức năng của hệ thống gồm:
-  * Trang chủ
-  * Đăng ký tài khoản
-  * Đăng nhập
-  * Quản lý sản phẩm
-  * Mua hàng
-  * Thanh toán
-  * Quản lý đơn hàng
-  * Trang quản trị
-
-* Triển khai thành công website lên môi trường AWS.
-
-* Hoàn thành đề tài thực tập và xác nhận toàn bộ chức năng của ứng dụng hoạt động ổn định trên nền tảng AWS Cloud.
+- Hoàn thiện kiến trúc hạ tầng AWS phục vụ cho project.
+- Thiết lập thành công Automation Server và các Managed Nodes trong môi trường AWS.
+- Hoàn thiện kết nối SSH giữa Automation Server và Managed Nodes.
+- Xây dựng hệ thống Ansible Automation với Inventory, Playbooks, Roles và Security Policy.
+- Xây dựng Python Security Engine với các thành phần Security Checks, Security Finding và Reporting.
+- Hoàn thiện quy trình Security Audit và Automated Remediation.
+- Hệ thống có khả năng kiểm tra trạng thái bảo mật, phát hiện vấn đề và hỗ trợ xử lý thông qua Ansible.
+- Hoàn thiện cơ chế lưu trữ Security State và Security Report.
+- Kiểm tra và đánh giá hoạt động của toàn bộ project.
+- Tổng hợp kết quả và hoàn thiện báo cáo thực tập.

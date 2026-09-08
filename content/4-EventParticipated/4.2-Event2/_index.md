@@ -1,6 +1,6 @@
 ---
 title: "Event 2 - FCAJ Technical Sharing Meeting"
-date: 2026-06-06
+date: 2026-09-07
 weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
@@ -151,5 +151,3 @@ Besides gaining technical knowledge, I had opportunities to discuss cloud techno
 # Event Photos
 
 ## Meeting Overview
-
-![Meeting Overview](/images/meeting-overview.jpg)

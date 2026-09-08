@@ -1,9 +1,9 @@
 ---
 title : "Networking Infrastructure"
-date : 2026-01-01
+date: 2026-09-07
 weight : 4
 chapter : false
-pre : " <b> 5.4. </b> "
+pre : " <b> 4.4. </b> "
 ---
 
 ### Goal
@@ -31,9 +31,9 @@ The streamlined network architecture includes:
 
 Complete the following configuration steps in order:
 
-- **5.4.1 Create the VPC and Public Subnets**
-- **5.4.2 Configure the Internet Gateway and Route Table**
-- **5.4.3 Configure Security Groups for the Application Load Balancer (ALB) and Amazon ECS**
+- **4.4.1 Create the VPC and Public Subnets**
+- **4.4.2 Configure the Internet Gateway and Route Table**
+- **4.4.3 Configure Security Groups for the Application Load Balancer (ALB) and Amazon ECS**
 
 ---
 

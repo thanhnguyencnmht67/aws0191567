@@ -1,14 +1,14 @@
 ---
 title : "Application Services"
-date : 2026-01-01
+date: 2026-09-07
 weight : 5
 chapter : false
-pre : " <b> 5.5. </b> "
+pre : " <b> 4.5. </b> "
 ---
 
 ### Goal
 
-Configure the core application services required for the Second-Hand Marketplace application.
+Configure the core application services required for the Warehouse Inventory Management application.
 
 ---
 
@@ -26,9 +26,9 @@ After completing this chapter, the application will be ready to access external 
 
 Complete the following sections in order:
 
-- **5.5.1 Configure MongoDB Atlas**
-- **5.5.2 Configure Amazon S3**
-- **5.5.3 Configure AWS Secrets Manager**
+- **4.5.1 Configure MongoDB Atlas**
+- **4.5.2 Configure Amazon S3**
+- **4.5.3 Configure AWS Secrets Manager**
 
 ---
 

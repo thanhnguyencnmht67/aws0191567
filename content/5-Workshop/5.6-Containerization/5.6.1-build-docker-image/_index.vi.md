@@ -1,20 +1,20 @@
 ---
 title : "Build Docker Image"
-date : 2026-01-01
+date: 2026-09-07
 weight : 1
 chapter : false
-pre : " <b> 5.6.1. </b> "
+pre : " <b> 4.6.1. </b> "
 ---
 
 ## Build Docker Image
 
-Trong phần này, bạn sẽ tạo Dockerfile, tệp loại trừ .dockerignore và build Docker Image cho ứng dụng Warehouse Inventory Management.
+Trong phần này, bạn sẽ chuẩn bị mã nguồn, cấu hình Dockerfile, tệp loại trừ .dockerignore và tiến hành build Docker Image cho ứng dụng Warehouse Inventory Management trực tiếp trên môi trường **AWS CloudShell**.
 
-Docker giúp đóng gói toàn bộ mã nguồn cùng các thư viện phụ thuộc vào một container độc lập, đảm bảo môi trường chạy nhất quán tuyệt đối giữa máy phát triển cá nhân và hạ tầng đám mây Amazon ECS Fargate.
+Sử dụng AWS CloudShell giúp tận dụng môi trường điện toán đám mây tích hợp sẵn Docker engine, đảm bảo quá trình build image tương thích hoàn toàn với hạ tầng Linux x86_64 của Amazon ECS Fargate.
 
 Tạo tệp .dockerignore
 
-Tại thư mục gốc của dự án, tạo một tệp mang tên **.dockerignore** để tránh việc copy các thư mục nặng, file cấu hình nhạy cảm hoặc file tạm vào container image:
+Tại thư mục gốc của dự án, tạo một tệp mang tên **.dockerignore** để loại bỏ các tệp không cần thiết trước khi đóng gói:
 
 ```text
 node_modules
@@ -57,28 +57,29 @@ CMD ["npm", "start"]
 
 Lưu Dockerfile sau khi hoàn tất cấu hình.
 
-![Dockerfile](/images/5-Workshop/5.6-Containerization/dockerfile.png)
+![Dockerfile](/images/5-Workshop/5.6-Containerization/5.6.1.png)
 
 ---
 
 
-## Build Docker Image
+## Build Docker Image trên AWS Cloudshell
 
-Sau khi tạo Dockerfile, mở Terminal tại thư mục gốc của dự án và thực hiện build Docker Image.
+Truy cập vào AWS Management Console, bấm vào biểu tượng **CloudShell** ở thanh điều hướng trên cùng (góc phải hoặc góc trái dưới).
 
-Chạy lệnh sau:
+Tải toàn bộ mã nguồn dự án lên **CloudShell** hoặc giải nén thư mục dự án vào thư mục làm việc.
+
+Di chuyển vào thư mục dự án và tiến hành build Docker Image:
 
 ```bash
 docker build -t inventory-app .
 ```
 
-Trong quá trình build, Docker sẽ thực hiện các bước sau:
+Trong quá trình build, hệ thống sẽ thực hiện các bước sau:
 
-1. Tải base image Node.js 20 Alpine từ Docker Hub nếu chưa có trên máy.
-2. Thiết lập thư mục làm việc /app bên trong container.
-3. Cài đặt các thư viện của ứng dụng bằng lệnh **npm install**.
-4. Sao chép toàn bộ mã nguồn của dự án vào container (bỏ qua các file trong .dockerignore).
-5. Đóng gói ứng dụng thành một Docker Image hoàn chỉnh.
+1. Kéo base image Node.js 20 Alpine.
+2. Thiết lập thư mục làm việc /app.
+3. Cài đặt các dependencies thông qua npm install.
+4. Đóng gói toàn bộ mã nguồn thành Docker Image độc lập.
 
 
 Để kiểm tra Docker Image vừa tạo, chạy lệnh:
@@ -87,7 +88,7 @@ Trong quá trình build, Docker sẽ thực hiện các bước sau:
 docker images
 ```
 
-Lệnh này sẽ hiển thị danh sách Docker Image trên máy. Xác nhận Docker Image vừa build xuất hiện với tag **latest**.
+Xác nhận Image mang tên inventory-app hiển thị với tag **latest**.
 
 ---
 
@@ -96,5 +97,5 @@ Lệnh này sẽ hiển thị danh sách Docker Image trên máy. Xác nhận Do
 Sau khi hoàn thành phần này, bạn sẽ có:
 
 - Tệp .dockerignore và Dockerfile chuẩn hóa cho ứng dụng quản lý kho.
-- Docker Image mang tên inventory-app được build thành công trên máy local.
-- Container Image sẵn sàng để gắn tag và tải lên Amazon Elastic Container Registry (Amazon ECR) ở phần tiếp theo.
+- Docker Image mang tên inventory-app được build thành công trên AWS CloudShell.
+- Image sẵn sàng để gắn thẻ (tag) và đẩy (push) lên kho lưu trữ Amazon ECR ở bài tiếp theo.

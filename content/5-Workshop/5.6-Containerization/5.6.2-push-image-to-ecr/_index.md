@@ -1,9 +1,9 @@
 ---
 title : "Push Image to Amazon ECR"
-date : 2026-01-01
+date: 2026-09-07
 weight : 2
 chapter : false
-pre : " <b> 5.6.2. </b> "
+pre : " <b> 4.6.2. </b> "
 ---
 
 ## Push Image to Amazon ECR
@@ -29,7 +29,6 @@ Configure the repository with the following settings.
 
 Choose **Create repository**.
 
-![Create Repository](/images/5-Workshop/5.6-Containerization/create-repository.png)
 
 ---
 
@@ -79,7 +78,6 @@ Navigate to:
 
 Open the repository and verify that the image has been uploaded successfully.
 
-![Repository Images](/images/5-Workshop/5.6-Containerization/repository-images.png)
 
 ---
 

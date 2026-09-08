@@ -1,9 +1,9 @@
 ---
 title : "Configure Network"
-date : 2026-01-01
+date: 2026-09-07
 weight : 2
 chapter : false
-pre : " <b> 5.4.2. </b> "
+pre : " <b> 4.4.2. </b> "
 ---
 
 ## Configure Network
@@ -35,7 +35,7 @@ Select **inventory-public-subnet-a → Actions → Edit subnet settings**, enabl
 
 Repeat the same steps for **inventory-public-subnet-b**.
 
-![Subnets](/images/5-Workshop/5.4-Networking/subnets.png)
+![Subnets](/images/5-Workshop/5.4-VPC/5.4.2.1.png)
 
 ---
 
@@ -60,7 +60,7 @@ After creating the Internet Gateway:
 
 Verify that the Internet Gateway status is **Attached**.
 
-![Internet Gateway](/images/5-Workshop/5.4-Networking/internet-gateway.png)
+![Internet Gateway](/images/5-Workshop/5.4-VPC/5.4.2.2.png)
 
 ---
 
@@ -91,7 +91,7 @@ Select **inventory-public-rt**, open the **Routes** tab, choose **Edit routes**,
 
 Choose **Save changes**.
 
-![Public Route Table Routes](/images/5-Workshop/5.4-Networking/route-table-routes.png)
+![Public Route Table Routes](/images/5-Workshop/5.4-VPC/5.4.2.3.png)
 
 ### Configure Subnet Associations
 
@@ -102,7 +102,7 @@ Open the **Subnet associations** tab, choose **Edit subnet associations**, and s
 
 Choose **Save associations**.
 
-![Subnet Associations](/images/5-Workshop/5.4-Networking/subnet-associations.png)
+![Subnet Associations](/images/5-Workshop/5.4-VPC/5.4.2.3.png)
 
 ---
 

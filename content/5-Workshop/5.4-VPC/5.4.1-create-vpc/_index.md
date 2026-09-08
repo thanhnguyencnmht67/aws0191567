@@ -1,9 +1,9 @@
 ---
 title : "Create VPC"
-date : 2026-01-01
+date: 2026-09-07
 weight : 1
 chapter : false
-pre : " <b> 5.4.1. </b> "
+pre : " <b> 4.4.1. </b> "
 ---
 
 ## Create VPC
@@ -32,7 +32,7 @@ Select **VPC only**, then configure the following settings:
 
 Review the configuration and choose **Create VPC**.
 
-![Create VPC](/images/5-Workshop/5.4-Networking/create-vpc.png)
+![Create VPC](/images/5-Workshop/5.4-VPC/5.4.1.1.png)
 
 ---
 
@@ -48,7 +48,7 @@ Select **inventory-vpc**, choose **Actions**, and then select **Edit VPC setting
 
 Under **DNS settings**, enable **DNS resolution** and **DNS hostnames**, then choose **Save changes**.
 
-![Edit VPC settings](/images/5-Workshop/5.4-Networking/create-vpc.png)
+![Edit VPC settings](/images/5-Workshop/5.4-VPC/5.4.1.2.png)
 
 ---
 
@@ -69,7 +69,7 @@ Select **inventory-vpc** and verify the following settings:
 
 Confirm that the VPC has been created successfully before proceeding to create subnets and route tables.
 
-![VPC Details](/images/5-Workshop/5.4-Networking/vpc-details.png)
+![VPC Details](/images/5-Workshop/5.4-VPC/5.4.1.2.png)
 
 ---
 

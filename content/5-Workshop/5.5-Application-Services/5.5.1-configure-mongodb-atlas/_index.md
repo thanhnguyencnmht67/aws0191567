@@ -1,9 +1,9 @@
 ---
 title : "Configure MongoDB Atlas"
-date : 2026-01-01
+date: 2026-09-07
 weight : 1
 chapter : false
-pre : " <b> 5.5.1. </b> "
+pre : " <b> 4.5.1. </b> "
 ---
 
 ## Configure MongoDB Atlas
@@ -26,7 +26,6 @@ MongoDB Atlas stores product information, inventory categories, stock quantities
 
 5. After creation, verify that the cluster status is **Available** or **Active**.
 
-![MongoDB Cluster](/images/5-Workshop/5.5-Application-Services/mongodb-cluster.png)
 
 ---
 
@@ -46,7 +45,6 @@ Create a database user with the following configuration:
 
 Save the username and password for later use.
 
-![Database User](/images/5-Workshop/5.5-Application-Services/database-user.png)
 
 ---
 
@@ -67,7 +65,6 @@ For development purposes, you may temporarily allow access from all IP addresses
 
 After deployment, replace this with the appropriate public IP address or CIDR range.
 
-![Network Access](/images/5-Workshop/5.5-Application-Services/network-access.png)
 
 ---
 
@@ -85,7 +82,6 @@ mongodb+srv://inventory_admin:<password>@cluster0.xxxxx.mongodb.net/warehouse_db
 
 This connection string will be stored securely using AWS Secrets Manager in a later section.
 
-![Connection String](/images/5-Workshop/5.5-Application-Services/connection-string.png)
 
 ---
 

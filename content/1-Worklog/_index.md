@@ -1,6 +1,6 @@
 ---
 title: "Worklog"
-date: 2024-01-01
+date: 2026-09-07
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
@@ -14,7 +14,7 @@ During the first eight weeks, I focused on learning AWS core services such as IA
 
 From Week 9 onward, I began preparing the internship project by researching technologies, designing the system architecture, developing the application, and finally deploying the complete solution on AWS Cloud.
 
-The internship project, **TechMarket E-Commerce Platform**, was successfully developed and deployed using Amazon ECS Fargate, Amazon ECR, Amazon S3, MongoDB Atlas, Application Load Balancer, Amazon Route 53, AWS Certificate Manager (ACM), Amazon CloudWatch, and AWS CodeBuild.
+The internship project, **Warehouse Inventory Management**, was developed using AWS infrastructure, Docker, Ansible automation, and a Python security engine for security auditing and remediation.
 
 The weekly worklog is organized as follows:
 

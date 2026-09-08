@@ -1,6 +1,6 @@
 ---
 title: "Week 10 Worklog"
-date: 2026-04-12
+date: 2026-09-07
 weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
@@ -9,39 +9,21 @@ pre: " <b> 1.10. </b> "
 
 ### Week 10 Objectives:
 
-* Prepare for the internship project.
-* Research technologies and design the initial system architecture.
+* Learn Docker and Amazon ECS fundamentals.
+* Build and deploy a containerized application on AWS.
 
 ### Tasks to be carried out this week:
 
 | Day | Task | Start Date | Completion Date |
 | --- | ---- | ---------- | --------------- |
-| 2 | Research internship project ideas and discuss possible system requirements | 07/06/2026 | 07/06/2026 |
-| 3 | Select the project topic and identify the technologies to be used | 08/06/2026 | 08/06/2026 |
-| 4 | Research Node.js, Express.js and MongoDB Atlas for the backend | 09/06/2026 | 09/06/2026 |
-| 5 | Design the initial application architecture and database structure | 10/06/2026 | 10/06/2026 |
-| 6 | Set up the development environment and initialize the project repository | 11/06/2026 | 12/06/2026 |
+| 2 | Learn AWS ECS and Docker fundamentals | 17/08/2026 | 19/08/2026 |
+| 3 | Study containers and container orchestration | 19/08/2026 | 20/08/2026 |
+| 4 | Write a Dockerfile and build a Docker image | 20/08/2026 | 21/08/2026 |
+| 5 | Deploy the container on AWS ECS and verify the application | 21/08/2026 | 22/08/2026 |
 
 ### Week 10 Achievements:
 
-* Researched and evaluated several internship project ideas.
-
-* Selected the internship project: **TechMarket E-Commerce Platform**.
-
-* Identified the technologies used in the project, including:
-  * Node.js
-  * Express.js
-  * MongoDB Atlas
-  * Amazon S3
-  * Docker
-  * Amazon ECS Fargate
-
-* Designed the initial application architecture.
-
-* Designed the MongoDB database structure.
-
-* Set up the local development environment.
-
-* Initialized the project source code repository.
-
-* Prepared the project foundation for the implementation phase.
+* Learned how Docker packages an application independently of its host environment.
+* Created a Dockerfile and built a working Docker image.
+* Pushed the image to a registry and configured an ECS task definition.
+* Deployed the web application successfully on an Amazon ECS Fargate cluster.

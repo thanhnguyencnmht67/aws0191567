@@ -1,9 +1,9 @@
 ---
 title : "Dịch vụ ứng dụng"
-date : 2026-01-01
+date: 2026-09-07
 weight : 5
 chapter : false
-pre : " <b> 5.5. </b> "
+pre : " <b> 4.5. </b> "
 ---
 
 ### Mục tiêu
@@ -29,9 +29,9 @@ Sau khi hoàn tất, ứng dụng sẽ có đầy đủ các dịch vụ lưu tr
 
 Thực hiện lần lượt các phần sau:
 
- **5.5.1 Cấu hình MongoDB Atlas** (Khởi tạo Cluster, Database User và Network Access)
- **5.5.2 Cấu hình Amazon S3** (Tạo S3 Bucket lưu trữ hình ảnh hàng tồn kho)
- **5.5.3 Cấu hình AWS Secrets Manager** (Lưu trữ chuỗi kết nối và thông tin bảo mật)
+ **4.5.1 Cấu hình MongoDB Atlas** (Khởi tạo Cluster, Database User và Network Access)
+ **4.5.2 Cấu hình Amazon S3** (Tạo S3 Bucket lưu trữ hình ảnh hàng tồn kho)
+ **4.5.3 Cấu hình AWS Secrets Manager** (Lưu trữ chuỗi kết nối và thông tin bảo mật)
 
 ---
 
