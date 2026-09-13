@@ -9,21 +9,23 @@ pre: " <b> 1.11. </b> "
 
 ### Week 11 Objectives:
 
-* Learn DevOps fundamentals and CI/CD workflows.
-* Automate deployment and monitor the deployment process.
+* Study DevOps fundamentals and Continuous Integration/Continuous Deployment (CI/CD).
+* Study AWS CodePipeline and CodeDeploy.
+* Create a pipeline to deploy source code from GitHub to a server automatically.
+* Test and monitor the deployment process to detect failures automatically.
 
 ### Tasks to be carried out this week:
 
-| Day | Task | Start Date | Completion Date |
-| --- | ---- | ---------- | --------------- |
-| 2 | Learn DevOps fundamentals and CI/CD workflows | 24/08/2026 | 26/08/2026 |
-| 3 | Study AWS CodePipeline, CodeBuild, and CodeDeploy | 26/08/2026 | 27/08/2026 |
-| 4 | Create a pipeline connecting GitHub with deployment infrastructure | 27/08/2026 | 28/08/2026 |
-| 5 | Test automated deployment and review deployment logs | 28/08/2026 | 29/08/2026 |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | Study AWS DevOps fundamentals and CI/CD | 24/08/2026 | 26/08/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 3 | Study AWS CodePipeline, CodeBuild, and CodeDeploy | 26/08/2026 | 27/08/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | Create a pipeline connecting a GitHub repository to EC2 through CodeDeploy | 27/08/2026 | 28/08/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | Test the automated deployment process and monitor logs | 28/08/2026 | 29/08/2026 | https://cloudjourney.awsstudygroup.com/ |
 
 ### Week 11 Achievements:
 
-* Understood the Source, Build, Test, and Deploy stages of CI/CD.
-* Configured an AWS CodePipeline workflow connected to a source repository.
-* Configured CodeDeploy to install applications on EC2 instances.
-* Reduced manual deployment effort through an automated CI/CD workflow.
+* Gained a strong understanding of the Source, Build, Test, and Deploy stages in CI/CD.
+* Successfully configured AWS CodePipeline to connect automatically to a repository.
+* Set up CodeDeploy to install applications smoothly on EC2 instances.
+* Saved manual deployment time through a fully automated CI/CD workflow.

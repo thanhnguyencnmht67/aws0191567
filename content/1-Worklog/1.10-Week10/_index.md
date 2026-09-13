@@ -9,21 +9,23 @@ pre: " <b> 1.10. </b> "
 
 ### Week 10 Objectives:
 
-* Learn Docker and Amazon ECS fundamentals.
-* Build and deploy a containerized application on AWS.
+* Study Docker basics and the AWS Elastic Container Service (ECS).
+* Understand containers and container orchestration.
+* Create a Docker image for an application from a Dockerfile.
+* Deploy an application container on AWS ECS and test it.
 
 ### Tasks to be carried out this week:
 
-| Day | Task | Start Date | Completion Date |
-| --- | ---- | ---------- | --------------- |
-| 2 | Learn AWS ECS and Docker fundamentals | 17/08/2026 | 19/08/2026 |
-| 3 | Study containers and container orchestration | 19/08/2026 | 20/08/2026 |
-| 4 | Write a Dockerfile and build a Docker image | 20/08/2026 | 21/08/2026 |
-| 5 | Deploy the container on AWS ECS and verify the application | 21/08/2026 | 22/08/2026 |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | Study AWS ECS and basic Docker concepts | 17/08/2026 | 19/08/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 3 | Study containers and container orchestration | 19/08/2026 | 20/08/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | Write a Dockerfile and build a Docker image from a sample application | 20/08/2026 | 21/08/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | Deploy a container on AWS ECS (Fargate/EC2) and test it | 21/08/2026 | 22/08/2026 | https://cloudjourney.awsstudygroup.com/ |
 
 ### Week 10 Achievements:
 
-* Learned how Docker packages an application independently of its host environment.
-* Created a Dockerfile and built a working Docker image.
-* Pushed the image to a registry and configured an ECS task definition.
-* Deployed the web application successfully on an Amazon ECS Fargate cluster.
+* Understood how Docker packages an application independently of its environment.
+* Successfully wrote a Dockerfile and created a working Docker image locally.
+* Pushed the image to a registry and configured an ECS Task Definition.
+* Successfully deployed and ran a web application on an AWS ECS Fargate cluster.
