@@ -1,9 +1,9 @@
 ---
 title : "Chia sẻ, đóng góp ý kiến"
 date: 2026-09-07
-weight : 6
+weight : 7
 chapter : false
-pre : " <b> 6. </b> "
+pre : " <b> 7. </b> "
 ---
 
 Sau thời gian tham gia chương trình **First Cloud AI Journey**, có cơ hội tiếp cận nhiều kiến thức mới về Cloud, AWS và cách triển khai các giải pháp trên môi trường thực tế. Dưới đây là một số nhận xét và đóng góp nhằm góp phần giúp chương trình ngày càng hoàn thiện hơn.
