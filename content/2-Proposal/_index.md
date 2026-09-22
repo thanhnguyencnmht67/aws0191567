@@ -52,6 +52,10 @@ The proposed solution is a cloud-native warehouse management system using AWS ma
 
 The system uses a layered, cloud-native container architecture on AWS.
 
+## Architecture Diagram
+
+![Warehouse Inventory Management system architecture](/images/2-Proposal/diagram.png)
+
 
 ## AWS Services Used
 
